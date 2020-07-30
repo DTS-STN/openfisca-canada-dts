@@ -1,0 +1,32 @@
+image:
+  repository: mtscontainers.azurecr.io/dtsee
+{{ if or (eq .Environment.Name "prod-blue") (eq .Environment.Name "prod-green") (eq .Environment.Name "dev") }}
+  tag: "{{ requiredEnv "DOCKER_TAG" }}" 
+{{ else }}
+  tag: latest
+{{ end }}
+  pullPolicy: Always
+
+extraEnv:
+  - name: OUR_VARIABLE_HERE
+    value: www.ourvaluehere.com
+
+ingress:
+      enabled: true
+      hosts:
+      {{ if or (eq .Environment.Name "prod-blue") (eq .Environment.Name "prod-green") }}
+        - dtsee.{{ requiredEnv "BASE_DOMAIN" }}
+      {{ end }}      
+        - dtsee-{{ .Environment.Name }}.{{ requiredEnv "BASE_DOMAIN" }}
+      annotations: {}
+      # kubernetes.io/ingress.class: traefik
+
+resources:
+  requests:
+    cpu: 200m
+    memory: 512Mi
+livenessDelay: 60
+readinessDelay: 60
+livenessPath: /
+readinessPath: /
+port: 8000
