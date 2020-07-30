@@ -1,0 +1,50 @@
+name: Build and Publish Main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_publish:
+    name: Build and Publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout Github Action'
+        uses: actions/checkout@v1
+
+      - name: 'Generate Build Number'
+        uses: einaregilsson/build-number@v1
+        with:
+          token: ${{secrets.github_token}}
+
+      - name: 'Login to Azure Cloud'
+        uses: azure/docker-login@v1
+        with:
+          login-server: mtscontainers.azurecr.io
+          username: ${{ secrets.ACR_USERNAME }}
+          password: ${{ secrets.ACR_PASSWORD }}
+
+      - name: 'Docker Build and Push Images to Azure Repo'
+        run: |
+          docker build --build-arg DB_NAME=temp -t mtscontainers.azurecr.io/dtsee:latest .
+          docker tag mtscontainers.azurecr.io/dtsee:latest mtscontainers.azurecr.io/dtsee:$BUILD_NUMBER
+          docker push mtscontainers.azurecr.io/dtsee:eelatest
+          docker push mtscontainers.azurecr.io/dtsee:$BUILD_NUMBER
+          
+      - name: 'Build Jenkins Parameters'
+        run: echo ::set-env name=params::$(echo $concat_params)
+        env: 
+          concat_params: '{ "DOCKER_TAG": "${{ env.BUILD_NUMBER }}", "TIER": "server", "TARGET": "main"}'
+
+      - name: 'Verify Jenkins Parameters'
+        run: echo ${{ env.params }}
+        
+      - name: 'Deploy to Main using Jenkins (migration test)'
+        uses: stigmelling/jenkins-action@v1.1
+        with:
+         jenkinsUrl: 'https://jenkins.dev.dts-stn.com'
+         username: 'dtsrobot'
+         token: '${{ secrets.DTSROBOT_API_TOKEN }}'
+         job: 'deploy_dtsee'
+         params: '${{ env.params }}'
