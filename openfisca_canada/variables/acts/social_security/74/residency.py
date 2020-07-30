@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from openfisca_aotearoa.entities import Person
+from openfisca_canada.entities import Person
 from openfisca_core.model_api import Variable, MONTH, ETERNITY, set_input_dispatch_by_period
 
 

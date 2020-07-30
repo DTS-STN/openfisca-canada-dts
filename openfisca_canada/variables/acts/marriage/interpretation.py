@@ -1,5 +1,5 @@
 from openfisca_core.model_api import *
-from openfisca_aotearoa.entities import Person
+from openfisca_canada.entities import Person
 
 
 class marriage__is_married(Variable):

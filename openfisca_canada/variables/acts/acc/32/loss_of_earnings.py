@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from openfisca_core.model_api import *
-from openfisca_aotearoa.entities import Person
+from openfisca_canada.entities import Person
 
 
 class weekly_compensation__loss_of_earnings_payable(Variable):

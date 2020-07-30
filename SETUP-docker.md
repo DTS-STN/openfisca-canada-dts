@@ -1,12 +1,12 @@
-## Setup OpenFisca Aotearoa to run in docker
+## Setup OpenFisca canada to run in docker
 
 ## Run the application using Docker
 
 - [Install Docker](https://www.docker.com/get-started).
-- Build the docker image: `docker build . -t openfisca-aotearoa`
-- Run the image: `docker run -it -p 5000:5000 openfisca-aotearoa`
+- Build the docker image: `docker build . -t openfisca-canada`
+- Run the image: `docker run -it -p 5000:5000 openfisca-canada`
 
-## Serve OpenFisca Aotearoa with the OpenFisca Web API
+## Serve OpenFisca canada with the OpenFisca Web API
 
 If you are considering building a web application, you can use the packaged OpenFisca Web API.
 
@@ -26,4 +26,4 @@ curl "http://localhost:5000/spec"
 
 This endpoint returns the [Open API specification](https://www.openapis.org/) of your API.
 
-:tada: OpenFisca Aotearoa is now served by the OpenFisca Web API! To learn more, go to the [OpenFisca Web API documentation](https://openfisca.org/doc/openfisca-web-api/index.html)
+:tada: OpenFisca canada is now served by the OpenFisca Web API! To learn more, go to the [OpenFisca Web API documentation](https://openfisca.org/doc/openfisca-web-api/index.html)

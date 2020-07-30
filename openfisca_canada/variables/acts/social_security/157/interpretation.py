@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from openfisca_core.model_api import *
-from openfisca_aotearoa.entities import Person
+from openfisca_canada.entities import Person
 
 
 class social_security__spouse_is_a_specified_beneficiary(Variable):

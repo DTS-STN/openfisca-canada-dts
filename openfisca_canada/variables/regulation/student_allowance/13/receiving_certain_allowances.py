@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from openfisca_core.model_api import *
-from openfisca_aotearoa.entities import Person
+from openfisca_canada.entities import Person
 
 
 class student_allowance__partner_or_person_receiving_certain_allowances(Variable):

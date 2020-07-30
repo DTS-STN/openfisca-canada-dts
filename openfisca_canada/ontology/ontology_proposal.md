@@ -1,4 +1,4 @@
-# Proposed approach to handle ontology learnings from OpenFisca Aotearoa work
+# Proposed approach to handle ontology learnings from OpenFisca canada work
 
 The OpenFisca project will result in the handling of ontology related aspects with respects New Zealand legislation. Recording the decisions around this for the purpose of providing a resource for any future authoritive ontology considerations. Archives New Zealand has already developed a ontology that covers NZ legislation that is not yet publically linkable.
 

@@ -1,4 +1,4 @@
-# We can run this test on our command line using `openfisca-run-test openfisca_aotearoa/tests/income_tax/family_scheme/family_tax_credit.yaml`
+# We can run this test on our command line using `openfisca-run-test openfisca_canada/tests/income_tax/family_scheme/family_tax_credit.yaml`
 - name: Tests persons age eligibility in relation to the family tax credit
   period: 2018-08
   absolute_error_margin: 0

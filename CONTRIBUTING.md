@@ -1,4 +1,4 @@
-Thank you for wanting to contribute to OpenFisca Aotearoa! :smiley:
+Thank you for wanting to contribute to OpenFisca canada! :smiley:
 
 TL;DR: [GitHub Flow](https://guides.github.com/introduction/flow/), [SemVer](http://semver.org/).
 
@@ -44,7 +44,7 @@ Examples:
 
 ### Changelog
 
-OpenFisca-Aotearoa changes must be understood by users who don't necessarily work on the code. The Changelog must therefore be as explicit as possible.
+OpenFisca-canada changes must be understood by users who don't necessarily work on the code. The Changelog must therefore be as explicit as possible.
 
 Each change must be documented with the following elements:
 
@@ -52,11 +52,11 @@ Each change must be documented with the following elements:
 
 
 > For instance :
-> # 13.0.0 - [#671](https://github.com/ServiceInnovationLab/openfisca-aotearoa/pull/671)
+> # 13.0.0 - [#671](https://github.com/ServiceInnovationLab/openfisca-canada/pull/671)
 >
-> ## 13.2.0 - [#676](https://github.com/ServiceInnovationLab/openfisca-aotearoa/pull/676)
+> ## 13.2.0 - [#676](https://github.com/ServiceInnovationLab/openfisca-canada/pull/676)
 >
-> ### 13.1.5 - [#684](https://github.com/ServiceInnovationLab/openfisca-aotearoa/pull/684)
+> ### 13.1.5 - [#684](https://github.com/ServiceInnovationLab/openfisca-canada/pull/684)
 
 - The second line indicates the type of the change. The possible types are:
  - `Tax and benefit system evolution`: Calculation improvement, fix, or update. Impacts the users interested in calculations.

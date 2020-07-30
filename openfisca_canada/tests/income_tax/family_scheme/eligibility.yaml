@@ -1,4 +1,4 @@
-# We can run this test on our command line using `openfisca-run-test openfisca_aotearoa/tests/income_tax/family_scheme/eligibility.yaml`
+# We can run this test on our command line using `openfisca-run-test openfisca_canada/tests/income_tax/family_scheme/eligibility.yaml`
 - name: A Person is of eligible age for the family scheme
   period: 2018-08
   absolute_error_margin: 0

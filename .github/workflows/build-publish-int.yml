@@ -27,10 +27,10 @@ jobs:
 
       - name: 'Docker Build and Push Images to Azure Repo'
         run: |
-          docker build --build-arg DB_NAME=temp -t mtscontainers.azurecr.io/dtsee:latest .
-          docker tag mtscontainers.azurecr.io/dtsee:latest mtscontainers.azurecr.io/dtsee:$BUILD_NUMBER
-          docker push mtscontainers.azurecr.io/dtsee:eelatest
-          docker push mtscontainers.azurecr.io/dtsee:$BUILD_NUMBER
+          docker build --build-arg DB_NAME=temp -t mtscontainers.azurecr.io/openfiscacanada:latest .
+          docker tag mtscontainers.azurecr.io/openfiscacanada:latest mtscontainers.azurecr.io/openfiscacanada:$BUILD_NUMBER
+          docker push mtscontainers.azurecr.io/openfiscacanada:eelatest
+          docker push mtscontainers.azurecr.io/openfiscacanada:$BUILD_NUMBER
           
       - name: 'Build Jenkins Parameters'
         run: echo ::set-env name=params::$(echo $concat_params)
@@ -46,5 +46,5 @@ jobs:
          jenkinsUrl: 'https://jenkins.dev.dts-stn.com'
          username: 'dtsrobot'
          token: '${{ secrets.DTSROBOT_API_TOKEN }}'
-         job: 'deploy_dtsee'
+         job: 'deploy_openfiscacanada'
          params: '${{ env.params }}'

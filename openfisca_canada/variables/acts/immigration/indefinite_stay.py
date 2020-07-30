@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from openfisca_core.model_api import Variable, DAY
-from openfisca_aotearoa.entities import Person
+from openfisca_canada.entities import Person
 
 
 class immigration__entitled_to_indefinite_stay(Variable):
