@@ -1,4 +1,4 @@
-# We can run this test on our command line using `openfisca-run-test openfisca_aotearoa/tests/income_tax/family_scheme/minimum_family_tax_credit.yaml`
+# We can run this test on our command line using `openfisca-run-test openfisca_canada/tests/income_tax/family_scheme/minimum_family_tax_credit.yaml`
 - name: A Person would be qualified for the working for the minumum family tax credit but receives a parents allowance
   period: 2018-08
   absolute_error_margin: 0

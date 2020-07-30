@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from openfisca_core.model_api import *
-from openfisca_aotearoa.entities import Person
+from openfisca_canada.entities import Person
 
 
 class finish_date_of_full_time_study_training_bridging_18th_birthday(Variable):

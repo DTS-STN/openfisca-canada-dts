@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from openfisca_aotearoa.entities import Family, Person
+from openfisca_canada.entities import Family, Person
 from openfisca_core.model_api import Variable, MONTH
 
 

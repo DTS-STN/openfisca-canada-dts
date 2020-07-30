@@ -3,4 +3,4 @@ clean:
 	find . -name '*.pyc' -exec rm \{\} \;
 
 test:
-	openfisca-run-test --country-package openfisca_aotearoa openfisca_aotearoa/tests
+	openfisca-run-test --country-package openfisca_canada openfisca_canada/tests

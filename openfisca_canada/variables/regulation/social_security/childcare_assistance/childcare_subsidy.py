@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from openfisca_core.model_api import *
-from openfisca_aotearoa.entities import Person, Family
+from openfisca_canada.entities import Person, Family
 
 
 class is_attending_school(Variable):

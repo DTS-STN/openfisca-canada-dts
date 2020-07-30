@@ -1,4 +1,4 @@
-## Setup Aotearoa Open Fisca in pyenv
+## Setup canada Open Fisca in pyenv
 
 ### Step 1: Install pyenv
 
@@ -9,8 +9,8 @@ curl https://pyenv.run | bash
 ### Step 2: Clone the repo
 
 ```sh
-git clone https://github.com/ServiceInnovationLab/openfisca-aotearoa.git
-cd openfisca-aotearoa
+git clone https://github.com/ServiceInnovationLab/openfisca-canada.git
+cd openfisca-canada
 ```
 
 ### Step 3: Install python using pyenv
@@ -45,9 +45,9 @@ make test
 ```
 > [Learn more about tests](https://openfisca.org/doc/coding-the-legislation/writing_yaml_tests.html)
 
-:tada: This OpenFisca Aotearoa Package is now installed and ready!
+:tada: This OpenFisca canada Package is now installed and ready!
 
-## Serve OpenFisca Aotearoa with the OpenFisca Web API
+## Serve OpenFisca canada with the OpenFisca Web API
 
 If you are considering building a web application, you can use the packaged OpenFisca Web API.
 
@@ -67,4 +67,4 @@ curl "http://localhost:5000/spec"
 
 This endpoint returns the [Open API specification](https://www.openapis.org/) of your API.
 
-:tada: OpenFisca Aotearoa is now served by the OpenFisca Web API! To learn more, go to the [OpenFisca Web API documentation](https://openfisca.org/doc/openfisca-web-api/index.html)
+:tada: OpenFisca canada is now served by the OpenFisca Web API! To learn more, go to the [OpenFisca Web API documentation](https://openfisca.org/doc/openfisca-web-api/index.html)

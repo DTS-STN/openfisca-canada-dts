@@ -1,8 +1,8 @@
-## Setup Aotearoa OpenFisca in pew
+## Setup canada OpenFisca in pew
 
 Follow this installation if you wish to:
   - run calculations on a large population;
-  - run your own instance of openfisca-aotearoa, but not modify the rules
+  - run your own instance of openfisca-canada, but not modify the rules
 
 ## Step 1: Install Python 3
 
@@ -73,7 +73,7 @@ Install the Country Package:
 
 
 ```sh
-pip install openfisca_aotearoa
+pip install openfisca_canada
 ```
 
 :tada: This OpenFisca Country Package is now installed and ready!

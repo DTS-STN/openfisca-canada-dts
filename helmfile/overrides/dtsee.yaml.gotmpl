@@ -1,5 +1,5 @@
 image:
-  repository: mtscontainers.azurecr.io/dtsee
+  repository: mtscontainers.azurecr.io/openfiscacanada
 {{ if or (eq .Environment.Name "prod-blue") (eq .Environment.Name "prod-green") (eq .Environment.Name "dev") }}
   tag: "{{ requiredEnv "DOCKER_TAG" }}" 
 {{ else }}
@@ -15,9 +15,9 @@ ingress:
       enabled: true
       hosts:
       {{ if or (eq .Environment.Name "prod-blue") (eq .Environment.Name "prod-green") }}
-        - dtsee.{{ requiredEnv "BASE_DOMAIN" }}
+        - openfiscacanada.{{ requiredEnv "BASE_DOMAIN" }}
       {{ end }}      
-        - dtsee-{{ .Environment.Name }}.{{ requiredEnv "BASE_DOMAIN" }}
+        - openfiscacanada-{{ .Environment.Name }}.{{ requiredEnv "BASE_DOMAIN" }}
       annotations: {}
       # kubernetes.io/ingress.class: traefik
 

@@ -1,4 +1,4 @@
-from openfisca_aotearoa.entities import Person, Family
+from openfisca_canada.entities import Person, Family
 from openfisca_core.model_api import *
 
 
