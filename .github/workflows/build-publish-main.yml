@@ -29,7 +29,7 @@ jobs:
         run: |
           docker build --build-arg DB_NAME=temp -t mtscontainers.azurecr.io/openfiscacanada:latest .
           docker tag mtscontainers.azurecr.io/openfiscacanada:latest mtscontainers.azurecr.io/openfiscacanada:$BUILD_NUMBER
-          docker push mtscontainers.azurecr.io/openfiscacanada:eelatest
+          docker push mtscontainers.azurecr.io/openfiscacanada:latest
           docker push mtscontainers.azurecr.io/openfiscacanada:$BUILD_NUMBER
           
       # - name: 'Build Jenkins Parameters'
