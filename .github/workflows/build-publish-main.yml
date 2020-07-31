@@ -32,19 +32,19 @@ jobs:
           docker push mtscontainers.azurecr.io/openfiscacanada:latest
           docker push mtscontainers.azurecr.io/openfiscacanada:$BUILD_NUMBER
           
-      # - name: 'Build Jenkins Parameters'
-      #   run: echo ::set-env name=params::$(echo $concat_params)
-      #   env: 
-      #     concat_params: '{ "DOCKER_TAG": "${{ env.BUILD_NUMBER }}", "TIER": "server", "TARGET": "main"}'
+      - name: 'Build Jenkins Parameters'
+        run: echo ::set-env name=params::$(echo $concat_params)
+        env: 
+          concat_params: '{ "DOCKER_TAG": "${{ env.BUILD_NUMBER }}", "TIER": "server", "TARGET": "main"}'
 
-      # - name: 'Verify Jenkins Parameters'
-      #   run: echo ${{ env.params }}
+      - name: 'Verify Jenkins Parameters'
+        run: echo ${{ env.params }}
         
-      # - name: 'Deploy to Main using Jenkins (migration test)'
-      #   uses: stigmelling/jenkins-action@v1.1
-      #   with:
-      #    jenkinsUrl: 'https://jenkins.dev.dts-stn.com'
-      #    username: 'dtsrobot'
-      #    token: '${{ secrets.DTSROBOT_API_TOKEN }}'
-      #    job: 'deploy_openfiscacanada'
-      #    params: '${{ env.params }}'
+      - name: 'Deploy to Main using Jenkins (migration test)'
+        uses: stigmelling/jenkins-action@v1.1
+        with:
+         jenkinsUrl: 'https://jenkins.dev.dts-stn.com'
+         username: 'dtsrobot'
+         token: '${{ secrets.DTSROBOT_API_TOKEN }}'
+         job: 'Deploy_DTS_OpenFisca'
+         params: '${{ env.params }}'
