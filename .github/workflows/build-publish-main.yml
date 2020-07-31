@@ -22,8 +22,8 @@ jobs:
         uses: azure/docker-login@v1
         with:
           login-server: mtscontainers.azurecr.io
-          username: ${{ secrets.ACR_USERNAME }}
-          password: ${{ secrets.ACR_PASSWORD }}
+          username: ${{ secrets.AZURE_GITHUB_SPN_ID }}
+          password: ${{ secrets.AZURE_GITHUB_SPN_PASS }}
 
       - name: 'Docker Build and Push Images to Azure Repo'
         run: |
