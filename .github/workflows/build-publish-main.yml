@@ -35,7 +35,7 @@ jobs:
       - name: 'Build Jenkins Parameters'
         run: echo ::set-env name=params::$(echo $concat_params)
         env: 
-          concat_params: '{ "DOCKER_TAG": "${{ env.BUILD_NUMBER }}", "TIER": "server", "TARGET": "main"}'
+          concat_params: '{ "DOCKER_TAG": "${{ env.BUILD_NUMBER }}", "TIER": "server", "TARGET": "pondrd"}'
 
       - name: 'Verify Jenkins Parameters'
         run: echo ${{ env.params }}
