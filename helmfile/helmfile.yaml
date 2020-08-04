@@ -20,12 +20,12 @@ environments:
     #USING INT, MAIN AND SPRINT TO REFLECT OUR INTEGRATION (PR VERSION), MAIN (REFLECTING MAIN BRANCH), RELEASE (STATIC RELEASE VERSION FOR SPRINT REVIEW)
     int:
     main:
-    release:
+    sprint:
     prod-blue:
     prod-green: 
 
 releases:
-# DTS Web
+# OPEN FISCA CANADA
   - name: openfiscacanada-{{ .Environment.Name }}
     chart: openfiscacanada/openfiscacanada
     version: 0.0.3
