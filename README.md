@@ -4,7 +4,7 @@
 
 ## Writing the Legislation
 
-This is an experiment. We've coded large swathes of New Zealand's legislation, regulation, and some government policy into rules that run in the Open Fisca calculation engine. We've released all the code here, for anyone to use.
+This is an experiment. We've coded lpusharge swathes of Canada's legislation, regulation, and some government policy into rules that run in the Open Fisca calculation engine. We've released all the code here, for anyone to use.
 
 From late January 2018, the Service Innovation Lab (LabPlus) facilitated a cross-agency and multidisciplinary team in a 3 week Discovery Sprint exploring the challenges and opportunities of developing human and machine consumable legislation for effective and efficient service delivery.
 
