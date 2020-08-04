@@ -21,6 +21,7 @@ environments:
     int:
     main:
     sprint:
+    test:
     prod-blue:
     prod-green: 
 
