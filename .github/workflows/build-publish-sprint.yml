@@ -40,7 +40,7 @@ jobs:
       - name: 'Verify Jenkins Parameters'
         run: echo ${{ env.params }}
         
-      - name: 'Deploy to Main using Jenkins (migration test)'
+      - name: 'Deploy to Sprint Environment using Jenkins'
         uses: stigmelling/jenkins-action@v1.1
         with:
          jenkinsUrl: 'https://jenkins.dev.dts-stn.com'
