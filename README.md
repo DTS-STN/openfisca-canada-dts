@@ -1,6 +1,6 @@
 # OpenFisca Canada
 
-[![CircleCI](https://circleci.com/gh/ServiceInnovationLab/openfisca-canada/tree/master.svg?style=svg)](https://circleci.com/gh/ServiceInnovationLab/openfisca-canada/tree/master)
+#WORK IN PROGRESS!!  INSTRUCTIONS ARE NOT RELIABLE.
 
 ## Writing the Legislation
 
