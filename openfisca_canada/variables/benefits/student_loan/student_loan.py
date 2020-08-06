@@ -1,0 +1,10 @@
+from openfisca_core.model_api import *
+from openfisca_canada.entities import Person
+
+
+class student_loan(Variable):
+    value_type = bool
+    entity = Person
+    # definition_period = MONTH
+    label = "Students are given 6 months deferral"
+    reference = "to be linked"
