@@ -1,10 +1,10 @@
 # OpenFisca Canada
 
-[![CircleCI](https://circleci.com/gh/ServiceInnovationLab/openfisca-canada/tree/master.svg?style=svg)](https://circleci.com/gh/ServiceInnovationLab/openfisca-canada/tree/master)
+#WORK IN PROGRESS!!  INSTRUCTIONS ARE NOT RELIABLE.
 
 ## Writing the Legislation
 
-This is an experiment. We've coded large swathes of New Zealand's legislation, regulation, and some government policy into rules that run in the Open Fisca calculation engine. We've released all the code here, for anyone to use.
+This is an experiment. We've coded lpusharge swathes of Canada's legislation, regulation, and some government policy into rules that run in the Open Fisca calculation engine. We've released all the code here, for anyone to use.
 
 From late January 2018, the Service Innovation Lab (LabPlus) facilitated a cross-agency and multidisciplinary team in a 3 week Discovery Sprint exploring the challenges and opportunities of developing human and machine consumable legislation for effective and efficient service delivery.
 
@@ -60,3 +60,5 @@ Read the [Setup canada Open Fisca in pyenv](SETUP-pyenv.md) instructions to mana
 
 - To write new legislation, read [the wiki](https://github.com/ServiceInnovationLab/openfisca-canada/wiki) along with the OpenFisca [Coding the legislation](https://openfisca.org/doc/coding-the-legislation/index.html) section.
 - To contribute to the code, read our [contribution doc](https://github.com/ServiceInnovationLab/openfisca-canada/blob/master/CONTRIBUTING.md).
+
+testing pr

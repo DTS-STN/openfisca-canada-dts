@@ -1,0 +1,9 @@
+version: '3'
+services:
+  development:
+    container_name: openfisca_dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+        - ./openfisca_canada:/openfisca/openfisca_canada
