@@ -2,6 +2,8 @@ version: '3'
 services:
   development:
     container_name: openfisca_dev
+    ports: 
+      - "5000:5000"
     build:
       context: .
       dockerfile: Dockerfile
