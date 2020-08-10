@@ -1,0 +1,53 @@
+---   
+     #makes 1001 or more 
+    - name: "1001 or more"
+      period: 2018-08
+      absolute_error_margin: 0
+      input:
+        has_1001_or_more: true
+      output:
+       has_some_income: true
+        # has reduced hours 
+    - name: "has reduced hours"
+      period: 2018-08
+      absolute_error_margin: 0
+      input:
+        some_income__hours_reduced: true
+      output:
+        has_some_income: true
+     # has reduced hours and makes 1001 or more
+    - name: "1001 or more and reduced hours"
+      period: 2018-08
+      absolute_error_margin: 0
+      input:
+        has_1001_or_more: true
+        some_income__hours_reduced: true
+      output:
+        has_some_income: true
+      
+    - name: "hours reduced but not 1001 or more"
+      period: 2018-08
+      absolute_error_margin: 0
+      input:
+        some_income__hours_reduced: true
+        has_1001_or_more: false
+      output:
+        has_some_income: true
+
+    - name: "has 1001 or more but not reduced hours"
+      period: 2018-08
+      absolute_error_margin: 0
+      input:
+        some_income__hours_reduced: false
+        has_1001_or_more: true
+      output:
+        has_some_income: true
+
+    - name: "neither 1001 or more or reduced hours"
+      period: 2018-08
+      absolute_error_margin: 0
+      input:
+        some_income__hours_reduced: false
+        has_1001_or_more: false
+      output:
+        has_some_income: false
