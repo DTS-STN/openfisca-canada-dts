@@ -1,0 +1,14 @@
+name: "High School Grad"
+period: "2020-08"
+absolute_error_margin: 0
+input:
+  persons:
+    student_1: 
+      no_income_before: true
+    student_2:
+      no_income_before: false
+
+output:
+  high_school_grad:
+    - true
+    - false
