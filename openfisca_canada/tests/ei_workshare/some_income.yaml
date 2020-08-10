@@ -1,53 +1,53 @@
 ---   
      #makes 1001 or more 
-    - name: "1001 or more"
+    - name: "some-income - 1001 or more"
       period: 2018-08
       absolute_error_margin: 0
       input:
-        has_1001_or_more: true
+        some_income__1001_or_more: true
       output:
-       has_some_income: true
+        has_some_income_1001_or_more_reduced_hours: true
         # has reduced hours 
-    - name: "has reduced hours"
+    - name: "some-income - has reduced hours"
       period: 2018-08
       absolute_error_margin: 0
       input:
         some_income__hours_reduced: true
       output:
-        has_some_income: true
+        has_some_income_1001_or_more_reduced_hours: true
      # has reduced hours and makes 1001 or more
-    - name: "1001 or more and reduced hours"
+    - name: "some-income - 1001 or more and reduced hours"
       period: 2018-08
       absolute_error_margin: 0
       input:
-        has_1001_or_more: true
+        some_income__1001_or_more: true
         some_income__hours_reduced: true
       output:
-        has_some_income: true
+        has_some_income_1001_or_more_reduced_hours: true
       
-    - name: "hours reduced but not 1001 or more"
+    - name: some-income - hours reduced but not 1001 or more"
       period: 2018-08
       absolute_error_margin: 0
       input:
         some_income__hours_reduced: true
-        has_1001_or_more: false
+        some_income__1001_or_more: false
       output:
-        has_some_income: true
+        has_some_income_1001_or_more_reduced_hours: true
 
-    - name: "has 1001 or more but not reduced hours"
+    - name: "some-income - has 1001 or more but not reduced hours"
       period: 2018-08
       absolute_error_margin: 0
       input:
         some_income__hours_reduced: false
-        has_1001_or_more: true
+        some_income__1001_or_more: true
       output:
-        has_some_income: true
+        has_some_income_1001_or_more_reduced_hours: true
 
-    - name: "neither 1001 or more or reduced hours"
+    - name: "some-income - neither 1001 or more or reduced hours"
       period: 2018-08
       absolute_error_margin: 0
       input:
         some_income__hours_reduced: false
-        has_1001_or_more: false
+        some_income__1001_or_more: false
       output:
-        has_some_income: false
+        has_some_income_1001_or_more_reduced_hours: false

@@ -9,8 +9,5 @@ class is_ei_workshare_eligible(Variable):
     definition_period = MONTH
     reference = u"TODO"
     def formula(persons, period, parameters):
-        return persons("has_some_income",period)
-        #  + \
-        # persons("has_hours_reduced_or_employed_lost_a_job",period) + \
-        # persons("has_1000_or_less",period) + \
-        # persons("is_self_employed_some_income",period)
+        return persons("has_some_income_1001_or_more_reduced_hours",period)
+   

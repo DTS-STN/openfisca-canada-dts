@@ -2,7 +2,7 @@ from openfisca_core.model_api import *
 # Import the entities specifically defined for this tax and benefit system
 from openfisca_canada.entities import Person, Family
 
-class has_some_income(Variable):
+class has_some_income_1001_or_more_reduced_hours(Variable):
     value_type = bool
     entity = Person
     label = u"Is this person eligible for the EI Workshare?"
@@ -10,12 +10,9 @@ class has_some_income(Variable):
     reference = u"TODO"
     def formula(persons, period, parameters):
         return persons("some_income__hours_reduced",period) + \
-        persons("has_1001_or_more",period)
-        #  + \
-        # persons("has_1000_or_less",period) + \
-        # persons("is_self_employed_some_income",period)
+        persons("some_income__1001_or_more",period)
 
-class has_1001_or_more(Variable):
+class some_income__1001_or_more(Variable):
     value_type = bool
     entity = Person
     label = u"Is this person making #1001 or more?"
