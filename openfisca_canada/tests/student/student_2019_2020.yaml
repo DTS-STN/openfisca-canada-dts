@@ -1,0 +1,27 @@
+name: "Student 2019-2020"
+period: "2020-08"
+absolute_error_margin: 0
+input: 
+  persons:
+    student_1:
+      student_lost_job: false
+      no_income_before: false
+
+    student_2:
+      student_lost_job: false
+      no_income_before: true
+
+    student_3:
+      student_lost_job: true
+      no_income_before: false
+
+    student_4:
+      student_lost_job: true
+      no_income_before: true
+
+output:
+  student_2019_2020:
+    - false
+    - true
+    - true
+    - true
