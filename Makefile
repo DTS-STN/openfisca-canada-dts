@@ -16,5 +16,5 @@ marcoRun:
   docker run -it --name openfisca_dev  openfisca_canada:latest
 
 marcoTest: 
-  docker exec openfisca_dev openfisca test -c openfisca_canada openfisca_canada/tests
+  docker exec openfisca_dev openfisca test -c openfisca_canada openfisca_canada/tests/mortgage_deferral
 
