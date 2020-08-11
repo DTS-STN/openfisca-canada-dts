@@ -9,6 +9,6 @@ jobs:
       - uses: actions/checkout@v1
       - name: 'Docker Build and Run Tests'
         run: |
-          docker build -t test_image .
+          docker build -t openfisca_dev .
           docker exec openfisca_dev openfisca test -c openfisca_canada openfisca_canada/tests
 
