@@ -2,14 +2,32 @@
   period: 2020-08
   absolute_error_margin: 0
   input:
-    student_loan__is_paying_debt: true
+    persons:
+      student_loan:
+        student_loan__has_student_debt: true
   output:
-    is_paying_debt: true
+    student_loan__has_student_debt: true
 
 - name: "Student not in debt"
   period: 2020-08
   absolute_error_margin: 0
   input:
-    student_loan__is_paying_debt: false
+    persons:
+      student_loan:
+        student_loan__has_student_debt: false
   output:
-    is_paying_debt: false
+    student_loan__has_student_debt: false
+
+- name: "Student by Name"
+  period: 2018-08
+  absolute_error_margin: 0
+  input:
+    persons:
+      Angelina:
+        student_loan__has_student_debt: false
+      Jennifer:
+        student_loan__has_student_debt: true
+  output:
+    student_loan__has_student_debt:
+      - false
+      - true
