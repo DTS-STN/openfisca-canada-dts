@@ -1,0 +1,295 @@
+---
+#Has lost all Income tests
+- name: "individual lost job - Scenario 1"
+  period: 2020-08
+  absolute_error_margin: 0
+  input:
+    persons:
+      person_lost_job_lost_all_income:
+        income_status_reason__has_lost_job: true
+        income_status__has_lost_all_income: true
+  output:
+    cerb__is_eligible:
+      - true   
+  #  cerb__eligible_scenario:
+  #    - 1
+
+
+- name: "individual employer closed - Scenario 1"
+  period: 2020-08
+  absolute_error_margin: 0
+  input:
+    persons:
+      person_employer_closed:
+        income_status_reason__has_employer_closed: true
+        income_status__has_lost_all_income: true
+  output:
+    cerb__is_eligible:
+      - true   
+ #   cerb__eligible_scenario:
+ #     - 1
+      
+    
+- name: "individual self eployed no income test"
+  period: 2020-08
+  absolute_error_margin: 0
+  input:
+    persons:
+      person_self_employed_no_income:
+        income_status_reason__has_self_employee_with_no_income: true
+        income_status__has_lost_all_income: true
+  output:
+    cerb__is_eligible:
+      - true   
+
+
+- name: "individual unpaid leave care of child or sick"
+  period: 2020-08
+  absolute_error_margin: 0
+  input:
+    persons:
+      person_on_unpaid_leave_to_care_for_child_or_sick:
+        income_status_reason__has_unpaid_leave_to_care_for_child_or_sick: true
+        income_status__has_lost_all_income: true
+  output:
+    cerb__is_eligible:
+      - true   
+
+
+- name: "individual recent parental leave cant return to work"
+  period: 2020-08
+  absolute_error_margin: 0
+  input:
+    persons:
+      person_recent_parental_leave_cant_return_to_work:
+        income_status_reason__has_parental_recently_cant_return_to_work: true
+        income_status__has_lost_all_income: true
+  output:
+    cerb__is_eligible:
+      - true   
+   
+
+- name: "individual has recent ei claim"
+  period: 2020-08
+  absolute_error_margin: 0
+  input:
+    persons:
+      person_recent_ei_claim_ended:
+        income_status_reason__has_ei_recent_claim_ended: true
+        income_status__has_lost_all_income: true
+  output:
+    cerb__is_eligible:
+      - true   
+
+
+- name: "individual is sick or quarantined or unpaid leave"
+  period: 2020-08
+  absolute_error_margin: 0
+  input:
+    persons:
+      person_is_sick_or_quarantine_or_unpaid:
+        income_status_reason__has_unpaid_leave_to_care_for_child_or_sick: true
+        income_status__has_lost_all_income: true
+  output:
+    cerb__is_eligible:
+      - true    
+
+#has lost some income Tests
+
+- name: "Lost Some Income - all false"
+  period: 2018-08
+  absolute_error_margin: 0
+  input:
+    persons:
+        person_lost_some_income_false:
+            income_status_reason__is_quarantined: false
+            income_status_reason__has_hours_reduced: false
+            income_status_reason__has_1000_or_less: false
+            income_status_reason__is_self_employed_some_income: false
+            income_status__has_lost_some_income: false
+  output:
+    cerb__is_eligible:
+      - false
+
+
+- name: "Lost Some Income - is quarantined"
+  period: 2018-08
+  absolute_error_margin: 0
+  input:
+    persons:
+        person_lost_some_income_is_quarantined:
+            income_status_reason__is_quarantined: true
+            income_status_reason__has_hours_reduced: false
+            income_status_reason__has_1000_or_less: false
+            income_status_reason__is_self_employed_some_income: false
+            income_status__has_lost_some_income: true
+  output:
+    cerb__is_eligible:
+      - true
+
+- name: "Lost Some Income - has hours reduced or lost a job"
+  period: 2018-08
+  absolute_error_margin: 0
+  input:
+    persons:
+        person_lost_some_income_false:
+            income_status_reason__is_quarantined: false
+            income_status_reason__has_hours_reduced: true
+            income_status_reason__has_1000_or_less: true
+            income_status_reason__is_self_employed_some_income: false
+            income_status__has_lost_some_income: true
+  output:
+    cerb__is_eligible:
+      - true
+
+- name: "Lost Some Income - has 1000 of less"
+  period: 2018-08
+  absolute_error_margin: 0
+  input:
+    persons:
+        person_lost_some_income_false:
+            income_status_reason__is_quarantined: false
+            income_status_reason__has_hours_reduced: false
+            income_status_reason__has_1000_or_less: true
+            income_status_reason__is_self_employed_some_income: true
+            income_status__has_lost_some_income: true
+  output:
+    cerb__is_eligible:
+      - true
+
+- name: "Lost Some Income - is self employed some income"
+  period: 2018-08
+  absolute_error_margin: 0
+  input:
+    persons:
+        person_lost_some_income_false:
+            income_status_reason__is_quarantined: false
+            income_status_reason__has_hours_reduced: false
+            income_status_reason__has_1000_or_less: true
+            income_status_reason__is_self_employed_some_income: true
+            income_status__has_lost_some_income: true
+  output:
+    cerb__is_eligible:
+      - true
+
+# Person has gross income of greater than 5K
+- name: "Lost Some Income - has hours reduced or lost a job"
+  period: 2018-08
+  absolute_error_margin: 0
+  input:
+    persons:
+        person_lost_some_income_false:
+            income_status_reason__is_gross_income_over_5k: true
+            income_status__has_lost_some_income: true
+  output:
+    cerb__is_eligible:
+      - true
+
+
+- name: "Some Income tests"
+  period: 2018-08
+  absolute_error_margin: 0
+  input:
+    persons:
+        Tom:
+            income_status_reason__is_quarantined: false
+            income_status_reason__has_hours_reduced: false
+            income_status_reason__has_1000_or_less: false
+            income_status_reason__is_self_employed_some_income: false
+            income_status__has_lost_some_income: false
+        Vanessa:
+            income_status_reason__is_quarantined: true
+            income_status_reason__has_hours_reduced: false
+            income_status_reason__has_1000_or_less: false
+            income_status_reason__is_self_employed_some_income: false
+            income_status__has_lost_some_income: true
+        Melissa:
+            income_status_reason__is_quarantined: false
+            income_status_reason__has_hours_reduced: true
+            income_status_reason__has_1000_or_less: true
+            income_status_reason__is_self_employed_some_income: false
+            income_status__has_lost_some_income: true
+        Jordan:
+            income_status_reason__is_quarantined: false
+            income_status_reason__has_hours_reduced: false
+            income_status_reason__has_1000_or_less: true
+            income_status_reason__is_self_employed_some_income: true
+            income_status__has_lost_some_income: true
+        Richard:
+            income_status_reason__is_quarantined: true
+            income_status_reason__has_hours_reduced: false
+            income_status_reason__has_1000_or_less: false
+            income_status_reason__is_self_employed_some_income: true
+            income_status__has_lost_some_income: true
+        Gabe:
+            income_status_reason__has_1000_or_less: false
+            income_status_reason__is_self_employed_some_income: true
+            income_status__has_lost_some_income: true
+  output:
+    cerb__is_eligible:
+      - false   
+      - true
+      - true
+      - true
+      - true
+      - false
+
+
+- name: "lost all income secenarios"
+  period: 2020-08
+  absolute_error_margin: 0
+  input:
+    persons:
+      person_lost_job:
+        income_status_reason__has_lost_job: true
+        income_status__has_lost_all_income: true
+        
+      person_employer_closed:
+        income_status_reason__has_employer_closed: true
+        income_status__has_lost_all_income: true
+        
+      person_self_employed_no_income:
+        income_status_reason__has_self_employee_with_no_income: true
+        income_status__has_lost_all_income: true
+        
+      person_on_unpaid_leave_to_care_for_child_or_sick:
+        income_status_reason__has_unpaid_leave_to_care_for_child_or_sick: true
+        income_status__has_lost_all_income: true
+        
+      person_recent_parental_leave_cant_return_to_work:
+        income_status_reason__has_parental_recently_cant_return_to_work: true
+        income_status__has_lost_all_income: true
+        
+      person_recent_ei_claim_ended:
+        income_status_reason__has_ei_recent_claim_ended: true 
+        income_status__has_lost_all_income: true 
+
+      person_is_sick_or_quarantine_or_unpaid:
+        income_status_reason__has_unpaid_leave_to_care_for_child_or_sick: true
+        income_status__has_lost_all_income: true
+
+      person_is_being_paid:
+        income_status_reason__has_lost_job: false
+        income_status_reason__has_employer_closed: false
+        income_status_reason__has_self_employee_with_no_income: false
+        income_status_reason__has_unpaid_leave_to_care_for_child_or_sick: false
+        income_status_reason__has_parental_recently_cant_return_to_work: false
+        income_status_reason__has_ei_recent_claim_ended: false
+        income_status__has_lost_all_income: false
+        
+      #person_no_income:
+        #income_status_reason__has_lost_all_income: true
+  output:
+    cerb__is_eligible:
+      - true   # person lost job
+      - true   # employer closed
+      - true   # self employed no income
+      - true   # unpaid leave for care of child or sick
+      - true   # recent parental leave, can't return to work
+      - true   # recent ei claim ended
+      - true   # person sick or quarantined or unpaid leave
+      - false  # person is being paid #
+     # - true   #person provided no responses
+
+
+
