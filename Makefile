@@ -6,4 +6,4 @@ build-run-dev:
 	docker-compose -f docker-compose.yml up --build --detach
 
 test:
-	docker exec openfisca_dev openfisca test -c openfisca_canada openfisca_canada/tests
+	docker exec openfisca_dev openfisca test -c openfisca_canada openfisca_canada/tests/benefitfinder
