@@ -6,6 +6,7 @@ jobs:
     name: Tests
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v1
       - name: 'Docker Build and Run Tests'
         run: |
           docker build -t test_image .
