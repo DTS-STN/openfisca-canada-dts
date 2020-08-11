@@ -6,7 +6,7 @@
     persons:
       "Tahi":
         present_in_new_zealand:
-          "2015-01-01": false
+          "2015-01-01": true
           "2015-01-02": true
           "2015-01-03": false
           "2015-01-04": true
