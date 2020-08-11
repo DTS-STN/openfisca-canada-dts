@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: 'Docker Build and Run Tests'
+      - name: 'Docker Build and Run Test'
         run: |
           docker build -t .
           docker exec openfisca test -c openfisca_canada openfisca_canada/tests
