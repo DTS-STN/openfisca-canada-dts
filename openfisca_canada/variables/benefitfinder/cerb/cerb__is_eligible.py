@@ -21,7 +21,7 @@ class cerb__is_eligible(Variable):
             (persons('income_status__has_lost_some_income', period) * persons("income_status_reason__is_self_employed_some_income",period) * persons("income_status_reason__has_1000_or_less",period)) + \
             persons('income_status_reason__is_gross_income_over_5k', period)
 
-class cerb__eligible_scenario_number(Variable):
+class cerb__eligible_scenario(Variable):
     value_type = float
     entity = Person
     definition_period = MONTH

@@ -276,7 +276,6 @@
         income_status_reason__has_unpaid_leave_to_care_for_child_or_sick: false
         income_status_reason__has_parental_recently_cant_return_to_work: false
         income_status_reason__has_ei_recent_claim_ended: false
-        income_status_reason__has_unpaid_leave_to_care_for_child_or_sick: false  
         income_status__has_lost_all_income: false
         
       #person_no_income:
