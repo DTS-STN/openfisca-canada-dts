@@ -6,6 +6,6 @@ class student_loan__is_paying_debt(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
-    default_value = false
-    label = "Students are given 6 months deferral"
-    reference = "to be linked"
+    default_value = False
+    label = u"Students are given 6 months deferral"
+    reference = u"to be linked"

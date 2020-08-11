@@ -1,16 +1,15 @@
----
 - name: "Student Loan Deferral elegible"
   period: 2020-08
   absolute_error_margin: 0
   input:
-    student_loan__is_in_student_debt: true
+    student_loan__is_paying_debt: true
   output:
-    is_in_student_debt: true
+    is_paying_debt: true
 
 - name: "Student not in debt"
   period: 2020-08
   absolute_error_margin: 0
   input:
-    student_loan__is_in_student_debt: false
+    student_loan__is_paying_debt: false
   output:
-    is_in_student_debt: false
+    is_paying_debt: false
