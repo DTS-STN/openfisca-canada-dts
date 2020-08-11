@@ -3,7 +3,7 @@ from openfisca_core.model_api import *
 # Import the entities specifically defined for this tax and benefit system
 from openfisca_canada.entities import Person, Family
 
-class has_some_income(Variable):
+class has_lost_some_income(Variable):
     value_type = bool
     entity = Person
     label = u"Does this person have some income?"
