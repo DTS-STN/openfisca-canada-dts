@@ -1,13 +1,14 @@
 name: Running Tests
 
 on: pull_request
-
 jobs:
-    # action.yml
+  Tests:
     name: Tests
-    runs:
-    using: 'docker'
-    image: 'Dockerfile'
-    args:
-        - ${{ inputs.who-to-greet }}
+    runs-on: ubuntu-latest
+    steps:
+        - name: 'Docker Action'
+          uses: addnab/docker-run-action@v1
+          with:
+            image: DockerFile
+            run: echo "hello world"
 
