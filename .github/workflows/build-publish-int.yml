@@ -8,6 +8,7 @@ on:
 jobs:
   build_publish:
     name: Build and Publish
+    needs: 'Open Fisca Tests'
     runs-on: ubuntu-latest
     steps:
       - name: 'Checkout Github Action'
