@@ -106,10 +106,8 @@
             income_status_reason__has_hours_reduced: false
             income_status_reason__has_1000_or_less: false
             income_status_reason__is_self_employed_some_income: false
-            income_status__has_lost_some_income: true
+            income_status__has_lost_some_income: false
   output:
-    income_status_reason__has_lost_some_income:
-      - false
     cerb__is_eligible:
       - false
 
@@ -137,7 +135,7 @@
         person_lost_some_income_false:
             income_status_reason__is_quarantined: false
             income_status_reason__has_hours_reduced: true
-            income_status_reason__has_1000_or_less: false
+            income_status_reason__has_1000_or_less: true
             income_status_reason__is_self_employed_some_income: false
             income_status__has_lost_some_income: true
   output:
@@ -153,7 +151,7 @@
             income_status_reason__is_quarantined: false
             income_status_reason__has_hours_reduced: false
             income_status_reason__has_1000_or_less: true
-            income_status_reason__is_self_employed_some_income: false
+            income_status_reason__is_self_employed_some_income: true
             income_status__has_lost_some_income: true
   output:
     cerb__is_eligible:
@@ -167,7 +165,7 @@
         person_lost_some_income_false:
             income_status_reason__is_quarantined: false
             income_status_reason__has_hours_reduced: false
-            income_status_reason__has_1000_or_less: false
+            income_status_reason__has_1000_or_less: true
             income_status_reason__is_self_employed_some_income: true
             income_status__has_lost_some_income: true
   output:
@@ -182,6 +180,7 @@
     persons:
         person_lost_some_income_false:
             income_status_reason__is_gross_income_over_5k: true
+            income_status__has_lost_some_income: true
   output:
     cerb__is_eligible:
       - true
@@ -197,7 +196,7 @@
             income_status_reason__has_hours_reduced: false
             income_status_reason__has_1000_or_less: false
             income_status_reason__is_self_employed_some_income: false
-            income_status__has_lost_some_income: true
+            income_status__has_lost_some_income: false
         Vanessa:
             income_status_reason__is_quarantined: true
             income_status_reason__has_hours_reduced: false
@@ -213,13 +212,13 @@
         Jordan:
             income_status_reason__is_quarantined: false
             income_status_reason__has_hours_reduced: false
-            income_status_reason__has_1000_or_less: false
+            income_status_reason__has_1000_or_less: true
             income_status_reason__is_self_employed_some_income: true
             income_status__has_lost_some_income: true
         Richard:
             income_status_reason__is_quarantined: true
-            income_status_reason__has_hours_reduced: true
-            income_status_reason__has_1000_or_less: true
+            income_status_reason__has_hours_reduced: false
+            income_status_reason__has_1000_or_less: false
             income_status_reason__is_self_employed_some_income: true
             income_status__has_lost_some_income: true
         Gabe:
@@ -233,7 +232,7 @@
       - true
       - true
       - true
-      - true
+      - false
 
 
 - name: "lost all income secenarios"
