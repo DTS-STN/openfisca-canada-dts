@@ -3,7 +3,7 @@ clean:
 	find . -name '*.pyc' -exec rm \{\} \;
 
 build-run-dev:
-	docker-compose -f docker-compose.yml up --build --detach --force-recreate
+	docker-compose up --build --detach --force-recreate
 
 test:
 	docker exec openfisca_dev openfisca test -c openfisca_canada openfisca_canada/tests
