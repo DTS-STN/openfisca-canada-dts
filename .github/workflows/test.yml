@@ -1,0 +1,13 @@
+name: Running Tests
+
+on: pull_request
+
+jobs:
+    # action.yml
+    name: Tests
+    runs:
+    using: 'docker'
+    image: 'Dockerfile'
+    args:
+        - ${{ inputs.who-to-greet }}
+
