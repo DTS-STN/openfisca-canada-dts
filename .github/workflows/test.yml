@@ -3,7 +3,7 @@ name: Running Tests
 on: pull_request
 jobs:
   Tests:
-    name: Tests
+    name: 'Open Fisca Tests'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
