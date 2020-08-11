@@ -32,7 +32,7 @@
             has_1000_or_less: false
             is_self_employed_some_income: true
   output:
-    has_some_income:
+    has_lost_some_income:
         - false
         - true
         - true
