@@ -1,0 +1,33 @@
+- name: "Mortgage Deferral elegible"
+  period: 2020-08
+  absolute_error_margin: 0
+  input:
+    persons:
+      mortgage_deferral:
+        mortgage_deferral__has_mortgage_payments: true
+  output:
+    mortgage_deferral__has_mortgage_payments: true
+
+- name: "Mortgage not an issue"
+  period: 2020-08
+  absolute_error_margin: 0
+  input:
+    persons:
+      mortgage_deferral:
+        mortgage_deferral__has_mortgage_payments: false
+  output:
+    mortgage_deferral__has_mortgage_payments: false
+
+- name: "Mortagage tests by Name"
+  period: 2018-08
+  absolute_error_margin: 0
+  input:
+    persons:
+      Sandra:
+        mortgage_deferral__has_mortgage_payments: false
+      Anne:
+        mortgage_deferral__has_mortgage_payments: true
+  output:
+    mortgage_deferral__has_mortgage_payments:
+      - false
+      - true
