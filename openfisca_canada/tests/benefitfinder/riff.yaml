@@ -1,0 +1,24 @@
+---
+#Has a riff
+- name: "individual - has a riff"
+  period: 2020-08
+  absolute_error_margin: 0
+  input:
+    persons:
+      person_has_a_riff:
+        riff__has_riff: true
+  output:
+    riff__is_eligible:
+      - true   
+ 
+#Does not Has a riff
+- name: "individual - has a riff"
+  period: 2020-08
+  absolute_error_margin: 0
+  input:
+    persons:
+      person_has_no_riff:
+        riff__has_riff: false
+  output:
+    riff__is_eligible:
+      - false   
