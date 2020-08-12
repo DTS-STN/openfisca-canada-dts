@@ -1,10 +1,6 @@
 image:
   repository: mtscontainers.azurecr.io/openfiscacanada
-{{ if or (eq .Environment.Name "prod-blue") (eq .Environment.Name "prod-green") (eq .Environment.Name "dev") }}
   tag: "{{ requiredEnv "DOCKER_TAG" }}" 
-{{ else }}
-  tag: latest
-{{ end }}
   pullPolicy: Always
 
 extraEnv:
