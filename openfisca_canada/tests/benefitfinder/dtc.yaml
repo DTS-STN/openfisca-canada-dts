@@ -33,3 +33,48 @@
   output:
     dtc__is_eligible:
       - false   
+
+- name: "Claimant has no selected relationship"
+  period: 2020-08
+  absolute_error_margin: 0
+  input:
+    persons:
+      claimant_relationship_is_none:
+        dtc__is_yourself: false
+        dtc__is_your_child: false
+        oas__is_eligible: true
+  output:
+    dtc__is_eligible:
+      - false   
+    dtc__is_eligible_for_dts_and_oas:
+      - false
+
+- name: "Claimant has no selected relationship"
+  period: 2020-08
+  absolute_error_margin: 0
+  input:
+    persons:
+      claimant_relationship_is_none:
+        dtc__is_yourself: false
+        dtc__is_your_child: true
+        oas__is_eligible: true
+  output:
+    dtc__is_eligible:
+      - true   
+    dtc__is_eligible_for_dts_and_oas:
+      - false
+
+- name: "Claimant has no selected relationship"
+  period: 2020-08
+  absolute_error_margin: 0
+  input:
+    persons:
+      claimant_relationship_is_none:
+        dtc__is_yourself: true
+        dtc__is_your_child: true
+        oas__is_eligible: true
+  output:
+    dtc__is_eligible:
+      - true   
+    dtc__is_eligible_for_dts_and_oas:
+      - true

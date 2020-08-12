@@ -22,4 +22,5 @@ class dtc__is_eligible_for_dts_and_oas(Variable):
 
     #return persons('dtc__is_yourself', period) * return persons('oas_is_eligible', period)
     def formula(persons, period, parameters):
-        return persons('dtc__is_yourself', period)
+        return persons('dtc__is_yourself', period) *\
+            persons('oas__is_eligible', period)
