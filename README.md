@@ -1,22 +1,8 @@
 # OpenFisca Canada
 
-#WORK IN PROGRESS!!  INSTRUCTIONS ARE NOT RELIABLE.
-
 ## Writing the Legislation
 
-This is an experiment. We've coded lpusharge swathes of Canada's legislation, regulation, and some government policy into rules that run in the Open Fisca calculation engine. We've released all the code here, for anyone to use.
-
-From late January 2018, the Service Innovation Lab (LabPlus) facilitated a cross-agency and multidisciplinary team in a 3 week Discovery Sprint exploring the challenges and opportunities of developing human and machine consumable legislation for effective and efficient service delivery.
-
-Please also read [the wiki](https://github.com/ServiceInnovationLab/openfisca-canada/wiki) as a way of introduction.
-
-### The Lab Team's server
-
-An instance of Open Fisca is running at
-[http://api.rules.nz/](http://api.rules.nz/)
-
-and an app called "Rapu Ture" is available to explore which variables exist
-[https://www.rules.nz/](http://www.rules.nz/)
+This is an experiment. We're coding pieces of Canada's legislation, regulation, and some government policy into rules that run in the Open Fisca calculation engine. We've released all the code here, for anyone to use.
 
 
 ## Install Instructions for Users and Contributors
@@ -35,30 +21,19 @@ Other OS should work if they can execute Python and NumPy.
 Pick option (A) or (B)
 
 
-### A. Minimal Installation - for users running the rules
+### Installation
 
 Follow this installation if you wish to:
   - run calculations on a large population;
   - run your own instance of OpenFisca-canada
   - run your own instance of the OpenFisca-canada rules package, as an OpenFisca Web API.
-  - **not** modify the rules
+  - modify the rules
 
-There are 3 documented ways to do this - Pick your tech:
+We are recommending you use docker:
   * [Run in docker](SETUP-docker.md) to run on an instance or your laptop
-  * [Setup pew and install from pip](SETUP-pew.md) to manage virtualenvs
-  * [Run on heroku's PaaS cloud](https://heroku.com/deploy)
-
-### B. Advanced Installation - for devs, modifying the rules and code
-
-Follow this tutorial if you wish to change the OpenFisca-canada rules or contribute to the source code.
-
-Read the [Setup canada Open Fisca in pyenv](SETUP-pyenv.md) instructions to manage python runtimes and eggs
-
-`pyenv` is simular to rbenv/rvm (for ruby) and nvm (for nodejs).
 
 ## Next Steps
 
 - To write new legislation, read [the wiki](https://github.com/ServiceInnovationLab/openfisca-canada/wiki) along with the OpenFisca [Coding the legislation](https://openfisca.org/doc/coding-the-legislation/index.html) section.
 - To contribute to the code, read our [contribution doc](https://github.com/ServiceInnovationLab/openfisca-canada/blob/master/CONTRIBUTING.md).
 
-testing pr
