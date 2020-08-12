@@ -1,0 +1,32 @@
+name: "old age security"
+period: 2020-08
+absolute_error_margin: 0
+input:
+  persons:
+    p1:
+      has_oas: true
+      has_allowance: true
+      has_allowance_for_survivor: true
+    p2:
+      has_oas: true
+      has_allowance: false
+      has_allowance_for_survivor: false
+    p3:
+      has_oas: false
+      has_allowance: true
+      has_allowance_for_survivor: false
+    p4:
+      has_oas: false
+      has_allowance: false
+      has_allowance_for_survivor: true
+    p5:
+      has_oas: false
+      has_allowance: false
+      has_allowance_for_survivor: false
+output:
+  oas__is_eligible:
+    - true
+    - true
+    - true
+    - true
+    - false
