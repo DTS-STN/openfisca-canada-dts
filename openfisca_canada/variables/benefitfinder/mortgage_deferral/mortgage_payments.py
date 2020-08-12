@@ -2,7 +2,7 @@ from openfisca_core.model_api import *
 from openfisca_canada.entities import Person
 
 
-class mortgage_deferral__has_mortgage_payments(Variable):
+class mortgage_deferral__is_eligible(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
