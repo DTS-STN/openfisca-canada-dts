@@ -12,7 +12,7 @@
       - true   
  
 #Does not Have need for rent help
-- name: "individual - has a riff"
+- name: "individual -  does not need rent help"
   period: 2020-08
   absolute_error_margin: 0
   input:
