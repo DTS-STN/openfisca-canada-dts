@@ -1,0 +1,24 @@
+---
+#Has a riff
+- name: "individual - needs rent help"
+  period: 2020-08
+  absolute_error_margin: 0
+  input:
+    persons:
+      person_needs_rent_help:
+        rent__has_need_for_rent_help: true
+  output:
+    rent__is_eligible:
+      - true   
+ 
+#Does not Has a riff
+- name: "individual - has a riff"
+  period: 2020-08
+  absolute_error_margin: 0
+  input:
+    persons:
+      person_has_no_need_of_rent_help:
+        rent__has_need_for_rent_help: false
+  output:
+    rent__is_eligible:
+      - false   
