@@ -5,7 +5,6 @@ from openfisca_canada.entities import Person
 
 class cesb__is_eligible(Variable):
     value_type = bool
-    default_value = False
     entity = Person
     definition_period = MONTH
     label = u"student is eligible for CESB benefit"

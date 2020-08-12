@@ -5,7 +5,6 @@ from openfisca_canada.entities import Person
 
 class is_student_2019_2020(Variable):
     value_type = bool
-    default_value = True
     entity = Person
     label = u"Is student in the year of 2019-2020"
     definition_period = MONTH
@@ -15,7 +14,6 @@ class is_student_2019_2020(Variable):
 
 class is_high_school_grad(Variable):
     value_type = bool
-    default_value = True
     entity = Person
     definition_period = MONTH
     label = u"Is graduating from high school in the year of 2019-2020"
@@ -25,14 +23,12 @@ class is_high_school_grad(Variable):
     
 class student_lost_job(Variable):
     value_type = bool
-    default_value = True
     entity = Person
     definition_period = MONTH
     label = u"student lost job"
 
 class has_no_income_before(Variable):
     value_type = bool
-    default_value = True
     entity = Person
     definition_period = MONTH
     label = u"student has no income before"
