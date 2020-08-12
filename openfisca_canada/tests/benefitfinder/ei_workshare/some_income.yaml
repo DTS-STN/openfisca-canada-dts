@@ -4,7 +4,7 @@
       period: 2018-08
       absolute_error_margin: 0
       input:
-        some_income__1001_or_more: true
+        income_status_reason__has_1001_or_more: true
       output:
         has_some_income_1001_or_more_reduced_hours: true
         # has reduced hours 
@@ -12,7 +12,8 @@
       period: 2018-08
       absolute_error_margin: 0
       input:
-        some_income__hours_reduced: true
+        income_status__has_lost_some_income: true
+        income_status_reason__has_hours_reduced: true
       output:
         has_some_income_1001_or_more_reduced_hours: true
      # has reduced hours and makes 1001 or more
@@ -20,8 +21,9 @@
       period: 2018-08
       absolute_error_margin: 0
       input:
-        some_income__1001_or_more: true
-        some_income__hours_reduced: true
+        income_status__has_lost_some_income: true
+        income_status_reason__has_1001_or_more: true
+        income_status_reason__has_hours_reduced: true
       output:
         has_some_income_1001_or_more_reduced_hours: true
       
@@ -29,8 +31,9 @@
       period: 2018-08
       absolute_error_margin: 0
       input:
-        some_income__hours_reduced: true
-        some_income__1001_or_more: false
+        income_status__has_lost_some_income: true
+        income_status_reason__has_hours_reduced: true
+        income_status_reason__has_1001_or_more: false
       output:
         has_some_income_1001_or_more_reduced_hours: true
 
@@ -38,8 +41,9 @@
       period: 2018-08
       absolute_error_margin: 0
       input:
-        some_income__hours_reduced: false
-        some_income__1001_or_more: true
+        income_status__has_lost_some_income: false
+        income_status_reason__has_hours_reduced: false
+        income_status_reason__has_1001_or_more: true
       output:
         has_some_income_1001_or_more_reduced_hours: true
 
@@ -47,7 +51,8 @@
       period: 2018-08
       absolute_error_margin: 0
       input:
-        some_income__hours_reduced: false
-        some_income__1001_or_more: false
+        income_status__has_lost_some_income: false
+        income_status_reason__has_hours_reduced: false
+        income_status_reason__has_1001_or_more: false
       output:
         has_some_income_1001_or_more_reduced_hours: false
