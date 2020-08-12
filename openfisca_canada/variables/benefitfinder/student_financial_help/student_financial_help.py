@@ -11,9 +11,9 @@ class student_financial_help__is_eligible(Variable):
     label = u"student financial help eligibility"
 
     def formula(persons, period, parameters):
-        return persons("has_plan_for_school", period)
+        return persons("student_financial_help__has_plan_for_school", period)
 
-class has_plan_for_school(Variable):
+class student_financial_help__has_plan_for_school(Variable):
     value_type = bool
     default_value = False
     entity = Person

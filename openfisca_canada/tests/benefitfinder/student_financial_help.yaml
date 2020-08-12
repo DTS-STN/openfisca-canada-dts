@@ -4,9 +4,9 @@ absolute_error_margin: 0
 input:
   persons:
     student_1:
-      has_plan_for_school: true
+      student_financial_help__has_plan_for_school: true
     student_2:
-      has_plan_for_school: false
+      student_financial_help__has_plan_for_school: false
 output:
   student_financial_help__is_eligible:
     - true
