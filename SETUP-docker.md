@@ -16,4 +16,5 @@ This implementation uses a mounted volume for your country rules and tests which
  - To run tests run make command: `make test`
  - Access the API url from: http://localhost:5000 or http://localhost:5000/spec
 
+*Note: if your machine is not configured to run 'MakeFile' commands - you can run the underlying commands found in the MakeFile to accomplish the above steps.
 
