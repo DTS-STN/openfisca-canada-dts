@@ -5,21 +5,21 @@ from openfisca_canada.entities import Person, Family
 
 class has_oas(Variable):
     value_type = bool
-    default_value = True
+    default_value = False
     entity = Person
     definition_period = MONTH
     label = u"receiving old age security"
 
 class has_allowance(Variable):
     value_type = bool
-    default_value = True
+    default_value = False
     entity = Person
     definition_period = MONTH
     label = u"receiving allowance"
 
 class has_allowance_for_survivor(Variable):
     value_type = bool
-    default_value = True
+    default_value = False
     entity = Person
     definition_period = MONTH
     label = u"receiving allowance for survivor"
