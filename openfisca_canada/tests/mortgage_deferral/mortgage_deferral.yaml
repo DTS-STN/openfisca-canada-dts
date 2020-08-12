@@ -4,7 +4,7 @@
   input:
     persons:
       mortgage_deferral:
-        mortgage_deferral__is_eligible: true
+        mortgage_deferral__has_mortgage_payments: true
   output:
     mortgage_deferral__is_eligible: true
 
@@ -14,7 +14,7 @@
   input:
     persons:
       mortgage_deferral:
-        mortgage_deferral__is_eligible: false
+        mortgage_deferral__has_mortgage_payments: false
   output:
     mortgage_deferral__is_eligible: false
 
@@ -24,9 +24,9 @@
   input:
     persons:
       Sandra:
-        mortgage_deferral__is_eligible: false
+        mortgage_deferral__has_mortgage_payments: false
       Anne:
-        mortgage_deferral__is_eligible: true
+        mortgage_deferral__has_mortgage_payments: true
   output:
     mortgage_deferral__is_eligible:
       - false

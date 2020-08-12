@@ -4,7 +4,7 @@
   input:
     persons:
       student_loan:
-        student_loan__is_eligible: true
+        student_loan__has_student_debt: true
   output:
     student_loan__is_eligible: true
 
@@ -14,7 +14,7 @@
   input:
     persons:
       student_loan:
-        student_loan__is_eligible: false
+        student_loan__has_student_debt: false
   output:
     student_loan__is_eligible: false
 
@@ -24,9 +24,9 @@
   input:
     persons:
       Angelina:
-        student_loan__is_eligible: false
+        student_loan__has_student_debt: false
       Jennifer:
-        student_loan__is_eligible: true
+        student_loan__has_student_debt: true
   output:
     student_loan__is_eligible:
       - false
