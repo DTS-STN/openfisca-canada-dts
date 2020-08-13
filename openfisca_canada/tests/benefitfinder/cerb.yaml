@@ -36,7 +36,7 @@
   input:
     persons:
       person_self_employed_no_income:
-        income_status_reason__has_self_employee_with_no_income: true
+        income_status_reason__is_self_employed: true
         income_status__has_lost_all_income: true
   output:
     cerb__is_eligible:
@@ -113,7 +113,7 @@
             income_status_reason__is_quarantined: false
             income_status_reason__has_hours_reduced: false
             income_status_reason__has_1000_or_less: false
-            income_status_reason__is_self_employed_some_income: false
+            income_status_reason__is_self_employed: false
             income_status__has_lost_some_income: false
   output:
     cerb__is_eligible:
@@ -131,7 +131,7 @@
             income_status_reason__is_quarantined: true
             income_status_reason__has_hours_reduced: false
             income_status_reason__has_1000_or_less: false
-            income_status_reason__is_self_employed_some_income: false
+            income_status_reason__is_self_employed: false
             income_status__has_lost_some_income: true
   output:
     cerb__is_eligible:
@@ -148,7 +148,7 @@
             income_status_reason__is_quarantined: false
             income_status_reason__has_hours_reduced: true
             income_status_reason__has_1000_or_less: true
-            income_status_reason__is_self_employed_some_income: false
+            income_status_reason__is_self_employed: false
             income_status__has_lost_some_income: true
   output:
     cerb__is_eligible:
@@ -165,7 +165,7 @@
             income_status_reason__is_quarantined: false
             income_status_reason__has_hours_reduced: false
             income_status_reason__has_1000_or_less: true
-            income_status_reason__is_self_employed_some_income: true
+            income_status_reason__is_self_employed: true
             income_status__has_lost_some_income: true
   output:
     cerb__is_eligible:
@@ -173,14 +173,13 @@
     cerb__eligible_scenario:
       - 5
 # Person has gross income of greater than 5K
-- name: "Lost Some Income - has hours reduced or lost a job"
+- name: "Person Gross income over 5k"
   period: 2018-08
   absolute_error_margin: 0
   input:
     persons:
         person_lost_some_income_false:
             income_status_reason__is_gross_income_over_5k: true
-            income_status__has_lost_some_income: true
   output:
     cerb__is_eligible:
       - true
@@ -196,35 +195,35 @@
             income_status_reason__is_quarantined: false
             income_status_reason__has_hours_reduced: false
             income_status_reason__has_1000_or_less: false
-            income_status_reason__is_self_employed_some_income: false
+            income_status_reason__is_self_employed: false
             income_status__has_lost_some_income: false
         Vanessa:
             income_status_reason__is_quarantined: true
             income_status_reason__has_hours_reduced: false
             income_status_reason__has_1000_or_less: false
-            income_status_reason__is_self_employed_some_income: false
+            income_status_reason__is_self_employed: false
             income_status__has_lost_some_income: true
         Melissa:
             income_status_reason__is_quarantined: false
             income_status_reason__has_hours_reduced: true
             income_status_reason__has_1000_or_less: true
-            income_status_reason__is_self_employed_some_income: false
+            income_status_reason__is_self_employed: false
             income_status__has_lost_some_income: true
         Jordan:
             income_status_reason__is_quarantined: false
             income_status_reason__has_hours_reduced: false
             income_status_reason__has_1000_or_less: true
-            income_status_reason__is_self_employed_some_income: true
+            income_status_reason__is_self_employed: true
             income_status__has_lost_some_income: true
         Richard:
             income_status_reason__is_quarantined: true
             income_status_reason__has_hours_reduced: false
             income_status_reason__has_1000_or_less: false
-            income_status_reason__is_self_employed_some_income: true
+            income_status_reason__is_self_employed: true
             income_status__has_lost_some_income: true
         Gabe:
             income_status_reason__has_1000_or_less: false
-            income_status_reason__is_self_employed_some_income: true
+            income_status_reason__is_self_employed: true
             income_status__has_lost_some_income: true
   output:
     cerb__is_eligible:
@@ -250,7 +249,7 @@
         income_status__has_lost_all_income: true
         
       person_self_employed_no_income:
-        income_status_reason__has_self_employee_with_no_income: true
+        income_status_reason__is_self_employed: true
         income_status__has_lost_all_income: true
         
       person_on_unpaid_leave_to_care_for_child_or_sick:
@@ -272,7 +271,7 @@
       person_is_being_paid:
         income_status_reason__has_lost_job: false
         income_status_reason__has_employer_closed: false
-        income_status_reason__has_self_employee_with_no_income: false
+        income_status_reason__is_self_employed: false
         income_status_reason__has_unpaid_leave_to_care_for_child_or_sick: false
         income_status_reason__has_parental_recently_cant_return_to_work: false
         income_status_reason__has_ei_recent_claim_ended: false
