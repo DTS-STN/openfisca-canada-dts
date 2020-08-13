@@ -19,7 +19,7 @@ class income_status_reason__has_employer_closed(Variable):
     label = u"has persons employer closed"
     reference = ""
 
-class income_status_reason__has_self_employee_with_no_income(Variable):
+class income_status_reason__is_self_employed(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
@@ -88,14 +88,6 @@ class income_status_reason__has_1001_or_more(Variable):
     value_type = bool
     entity = Person
     label = u"Is this person making less than 1000?"
-    definition_period = MONTH
-    default_value = False
-    reference = u"TODO"
-
-class income_status_reason__is_self_employed_some_income(Variable):
-    value_type = bool
-    entity = Person
-    label = u"Is this person self inployed with some income?"
     definition_period = MONTH
     default_value = False
     reference = u"TODO"
