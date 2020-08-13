@@ -1,0 +1,119 @@
+-   name: "DTC parent and child have document"
+    period: 2020-08
+    absolute_error_margin: 0
+    input:
+        persons:
+            parent:
+                dtc__has_document: true
+            child:
+                dtc__has_document: true
+        families:
+            f1:
+                children: ["child"]
+                parents: ["parent"]
+    output:
+        persons:
+            parent:
+                dtc__is_eligible: true   
+
+-   name: "DTC child has document"
+    period: 2020-08
+    absolute_error_margin: 0
+    input:
+        persons:
+            parent:
+                dtc__has_document: false
+            child:
+                dtc__has_document: true
+        families:
+            f1:
+                children: ["child"]
+                parents: ["parent"]
+    output:
+        persons:
+            parent:
+                dtc__is_eligible: true   
+
+-   name: "DTC parent has document"
+    period: 2020-08
+    absolute_error_margin: 0
+    input:
+        persons:
+            parent:
+                dtc__has_document: true
+            child:
+                dtc__has_document: false
+        families:
+            f1:
+                children: ["child"]
+                parents: ["parent"]
+    output:
+        persons:
+            parent:
+                dtc__is_eligible: true  
+
+-   name: "DTC no document"
+    period: 2020-08
+    absolute_error_margin: 0
+    input:
+        persons:
+            parent:
+                dtc__has_document: false
+            child:
+                dtc__has_document: false
+        families:
+            f1:
+                children: ["child"]
+                parents: ["parent"]
+    output:
+        persons:
+            parent:
+                dtc__is_eligible: false   
+
+-   name: "Person has document and has oas"
+    period: 2020-08
+    absolute_error_margin: 0
+    input:
+        persons:
+            has_document_has_oas:
+                dtc__has_document: true
+                oas__is_eligible: true
+    output:
+        dtc__is_eligible: true   
+        dtc__is_eligible_for_dtc_and_oas: true
+
+-   name: "Person has no document and has oas"
+    period: 2020-08
+    absolute_error_margin: 0
+    input:
+        persons:
+            has_no_document_has_oas:
+                dtc__has_document: false
+                oas__is_eligible: true
+    output:
+        dtc__is_eligible: false   
+        dtc__is_eligible_for_dtc_and_oas: false
+
+-   name: "Person has document and has no oas"
+    period: 2020-08
+    absolute_error_margin: 0
+    input:
+        persons:
+            has_document_has_no_oas:
+                dtc__has_document: true
+                oas__is_eligible: false
+    output:
+        dtc__is_eligible: true   
+        dtc__is_eligible_for_dtc_and_oas: false
+
+-   name: "Person has no document and has no oas"
+    period: 2020-08
+    absolute_error_margin: 0
+    input:
+        persons:
+            has_no_document_has_no_oas:
+                dtc__has_document: false
+                oas__is_eligible: false
+    output:
+        dtc__is_eligible: false   
+        dtc__is_eligible_for_dtc_and_oas: false
