@@ -2,6 +2,7 @@ name: Build and Publish Sprint
 
 on:
   release:
+    types: [published]
     branches:
       - main
 
