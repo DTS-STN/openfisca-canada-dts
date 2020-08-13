@@ -1,0 +1,61 @@
+name: "is student 2019-2020"
+period: "2020-08"
+absolute_error_margin: 0
+input: 
+  persons:
+    student_1:
+      student_lost_job: true
+      has_no_income_before: false
+    student_2:
+      student_lost_job: false
+      has_no_income_before: true
+    student_3:
+      student_lost_job: false
+      has_no_income_before: false
+    student_4:
+      student_lost_job: true
+      has_no_income_before: true
+output:
+  is_student_2019_2020:
+    - true
+    - true
+    - false
+    - true
+
+name: "is high school grad"
+period: "2020-08"
+absolute_error_margin: 0
+input: 
+  persons:
+    student_1:
+      has_no_income_before: false
+    student_2:
+      has_no_income_before: true
+output:
+  is_high_school_grad: 
+    - false
+    - true
+
+name: "is cesb benefit eligible"
+period: "2020-08"
+absolute_error_margin: 0
+input: 
+  persons:
+    student_1:
+      is_student_2019_2020: true
+      is_high_school_grad: false
+    student_2:
+      is_student_2019_2020: true
+      is_high_school_grad: false
+    student_3:
+      is_student_2019_2020: true
+      is_high_school_grad: true
+    student_4:
+      is_student_2019_2020: false
+      is_high_school_grad: false
+output:
+  cesb__is_eligible:
+    - true
+    - true
+    - true
+    - false
