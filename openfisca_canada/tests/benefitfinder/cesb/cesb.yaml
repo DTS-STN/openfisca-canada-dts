@@ -4,19 +4,19 @@ absolute_error_margin: 0
 input: 
   persons:
     student_1:
-      student_lost_job: true
-      has_no_income_before: false
+      cesb__student_lost_job: true
+      cesb__has_no_income_before: false
     student_2:
-      student_lost_job: false
-      has_no_income_before: true
+      cesb__student_lost_job: false
+      cesb__has_no_income_before: true
     student_3:
-      student_lost_job: false
-      has_no_income_before: false
+      cesb__student_lost_job: false
+      cesb__has_no_income_before: false
     student_4:
-      student_lost_job: true
-      has_no_income_before: true
+      cesb__student_lost_job: true
+      cesb__has_no_income_before: true
 output:
-  is_student_2019_2020:
+  cesb__is_student_2019_2020:
     - true
     - true
     - false
@@ -28,11 +28,11 @@ absolute_error_margin: 0
 input: 
   persons:
     student_1:
-      has_no_income_before: false
+      cesb__has_no_income_before: false
     student_2:
-      has_no_income_before: true
+      cesb__has_no_income_before: true
 output:
-  is_high_school_grad: 
+  cesb__is_high_school_grad: 
     - false
     - true
 
@@ -42,17 +42,17 @@ absolute_error_margin: 0
 input: 
   persons:
     student_1:
-      is_student_2019_2020: true
-      is_high_school_grad: false
+      cesb__is_student_2019_2020: true
+      cesb__is_high_school_grad: false
     student_2:
-      is_student_2019_2020: true
-      is_high_school_grad: false
+      cesb__is_student_2019_2020: true
+      cesb__is_high_school_grad: false
     student_3:
-      is_student_2019_2020: true
-      is_high_school_grad: true
+      cesb__is_student_2019_2020: true
+      cesb__is_high_school_grad: true
     student_4:
-      is_student_2019_2020: false
-      is_high_school_grad: false
+      cesb__is_student_2019_2020: false
+      cesb__is_high_school_grad: false
 output:
   cesb__is_eligible:
     - true
