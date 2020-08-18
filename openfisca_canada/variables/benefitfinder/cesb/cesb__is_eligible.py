@@ -9,5 +9,8 @@ class cesb__is_eligible(Variable):
     definition_period = MONTH
     label = u"student is eligible for CESB benefit"
 
-    def formula(persons, period, parameters):
-        return persons("is_student_2019_2020", period) + persons("is_high_school_grad", period)
+    def formula_2020_08(persons, period, parameters):
+        return parameters(period).cesb__is_eligible * (persons("is_student_2019_2020", period) + persons("is_high_school_grad", period))
+
+    def formula_2020_09(persons, period, parameters):
+        return parameters(period).cesb__is_eligible * (persons("is_student_2019_2020", period) + persons("is_high_school_grad", period))
