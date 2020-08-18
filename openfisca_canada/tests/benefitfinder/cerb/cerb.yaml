@@ -11,9 +11,8 @@
   output:
     cerb__is_eligible:
       - true   
-    cerb__eligible_scenario:
-      - 1
-
+    cerb__is_eligible_lost_all_income_lost_job_or_employer_closed:
+      - true
 
 - name: "individual employer closed - Scenario 1"
   period: 2020-08
@@ -26,8 +25,8 @@
   output:
     cerb__is_eligible:
       - true   
-    cerb__eligible_scenario:
-      - 1
+    cerb__is_eligible_lost_all_income_lost_job_or_employer_closed:
+      - true
       
     
 - name: "individual self eployed no income test"
@@ -41,8 +40,8 @@
   output:
     cerb__is_eligible:
       - true  
-    cerb__eligible_scenario:
-      - 4 
+    cerb__is_eligible_lost_all_income_self_employed_closed_unpaid_leave_parental_leave_recent_ei_claim:
+      - true 
 
 
 - name: "individual unpaid leave care of child or sick"
@@ -56,8 +55,8 @@
   output:
     cerb__is_eligible:
       - true   
-    cerb__eligible_scenario:
-      - 4
+    cerb__is_eligible_lost_all_income_self_employed_closed_unpaid_leave_parental_leave_recent_ei_claim:
+      - true
 
 - name: "individual recent parental leave cant return to work"
   period: 2020-08
@@ -70,8 +69,8 @@
   output:
     cerb__is_eligible:
       - true   
-    cerb__eligible_scenario:
-      - 4
+    cerb__is_eligible_lost_all_income_self_employed_closed_unpaid_leave_parental_leave_recent_ei_claim:
+      - true
    
 
 - name: "individual has recent ei claim"
@@ -85,8 +84,8 @@
   output:
     cerb__is_eligible:
       - true   
-    cerb__eligible_scenario:
-      - 4
+    cerb__is_eligible_lost_all_income_self_employed_closed_unpaid_leave_parental_leave_recent_ei_claim:
+      - true
 
 - name: "individual is sick or quarantined or unpaid leave"
   period: 2020-08
@@ -99,8 +98,8 @@
   output:
     cerb__is_eligible:
       - true    
-    cerb__eligible_scenario:
-      - 4
+    cerb__is_eligible_lost_all_income_self_employed_closed_unpaid_leave_parental_leave_recent_ei_claim:
+      - true
 
 #has lost some income Tests
 
@@ -118,8 +117,7 @@
   output:
     cerb__is_eligible:
       - false
-    cerb__eligible_scenario:
-      - 0
+    
 
 
 - name: "Lost Some Income - is quarantined"
@@ -136,8 +134,8 @@
   output:
     cerb__is_eligible:
       - true
-    cerb__eligible_scenario:
-      - 3
+    cerb__is_eligible_lost_some_income_quarantine:
+      - true
 
 - name: "Lost Some Income - has hours reduced or lost a job"
   period: 2018-08
@@ -153,8 +151,8 @@
   output:
     cerb__is_eligible:
       - true
-    cerb__eligible_scenario:
-      - 2
+    cerb__is_eligible_lost_some_income_reduced_hours_1000_or_less:
+      - true
 
 - name: "Lost Some Income - is self employed some income"
   period: 2018-08
@@ -170,8 +168,8 @@
   output:
     cerb__is_eligible:
       - true
-    cerb__eligible_scenario:
-      - 5
+    cerb__is_eligible_lost_some_income_self_employed_1000_hours_or_less:
+      - true
 # Person has gross income of greater than 5K
 - name: "Person Gross income over 5k"
   period: 2018-08
@@ -183,8 +181,8 @@
   output:
     cerb__is_eligible:
       - true
-    cerb__eligible_scenario:
-      - 6
+    cerb__is_eligible_gross_income_over_5k:
+      - true
 
 - name: "Some Income tests"
   period: 2018-08

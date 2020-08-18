@@ -4,9 +4,9 @@
     input:
         persons:
             parent:
-                dtc__has_document: true
+                dtc__has_documented_disability: true
             child:
-                dtc__has_document: true
+                dtc__has_documented_disability: true
         families:
             f1:
                 children: ["child"]
@@ -22,9 +22,9 @@
     input:
         persons:
             parent:
-                dtc__has_document: false
+                dtc__has_documented_disability: false
             child:
-                dtc__has_document: true
+                dtc__has_documented_disability: true
         families:
             f1:
                 children: ["child"]
@@ -40,9 +40,9 @@
     input:
         persons:
             parent:
-                dtc__has_document: true
+                dtc__has_documented_disability: true
             child:
-                dtc__has_document: false
+                dtc__has_documented_disability: false
         families:
             f1:
                 children: ["child"]
@@ -58,9 +58,9 @@
     input:
         persons:
             parent:
-                dtc__has_document: false
+                dtc__has_documented_disability: false
             child:
-                dtc__has_document: false
+                dtc__has_documented_disability: false
         families:
             f1:
                 children: ["child"]
@@ -76,7 +76,7 @@
     input:
         persons:
             has_document_has_oas:
-                dtc__has_document: true
+                dtc__has_documented_disability: true
                 oas__is_eligible: true
     output:
         dtc__is_eligible: true   
@@ -88,7 +88,7 @@
     input:
         persons:
             has_no_document_has_oas:
-                dtc__has_document: false
+                dtc__has_documented_disability: false
                 oas__is_eligible: true
     output:
         dtc__is_eligible: false   
@@ -100,7 +100,7 @@
     input:
         persons:
             has_document_has_no_oas:
-                dtc__has_document: true
+                dtc__has_documented_disability: true
                 oas__is_eligible: false
     output:
         dtc__is_eligible: true   
@@ -112,7 +112,7 @@
     input:
         persons:
             has_no_document_has_no_oas:
-                dtc__has_document: false
+                dtc__has_documented_disability: false
                 oas__is_eligible: false
     output:
         dtc__is_eligible: false   
