@@ -3,7 +3,7 @@ from openfisca_core.model_api import *
 # Import the entities specifically defined for this tax and benefit system
 from openfisca_canada.entities import Person
 
-class is_student_2019_2020(Variable):
+class cesb__is_student_2019_2020(Variable):
     value_type = bool
     entity = Person
     label = u"Is student in the year of 2019-2020"
@@ -12,7 +12,7 @@ class is_student_2019_2020(Variable):
     def formula(persons, period, parameters):
         return persons("student_lost_job", period) + persons("has_no_income_before", period)
 
-class is_high_school_grad(Variable):
+class cesb__is_high_school_grad(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
@@ -21,13 +21,13 @@ class is_high_school_grad(Variable):
     def formula(persons, period, parameters):
         return persons("has_no_income_before", period)
     
-class student_lost_job(Variable):
+class cesb__student_lost_job(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
     label = u"student lost job"
 
-class has_no_income_before(Variable):
+class cesb__has_no_income_before(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
