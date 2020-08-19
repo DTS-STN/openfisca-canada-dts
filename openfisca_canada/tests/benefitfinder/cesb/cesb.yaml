@@ -1,26 +1,29 @@
+---
+
 - name: "is student 2019-2020"
   period: "2020-08"
   absolute_error_margin: 0
   input: 
     persons:
       student_1:
-        cesb__student_lost_job: true
-        cesb__has_no_income_before: false
+        cesb__is_student_2019_2020: true
+        income_status__has_lost_all_income: true
       student_2:
-        cesb__student_lost_job: false
-        cesb__has_no_income_before: true
+        cesb__is_high_school_grad: true
+        income_status__has_lost_all_income: true
       student_3:
-        cesb__student_lost_job: false
-        cesb__has_no_income_before: false
+        cesb__is_student_2019_2020: true
+        income_status__has_lost_no_income: true
       student_4:
-        cesb__student_lost_job: true
-        cesb__has_no_income_before: true
+        cesb__is_high_school_grad: true
+        income_status__has_lost_no_income: true
   output:
-    cesb__is_student_2019_2020:
-      - true
+    cesb__is_eligible:
       - true
       - false
       - true
+      - true
+
 
 - name: "is high school grad"
   period: "2020-08"
@@ -28,37 +31,15 @@
   input: 
     persons:
       student_1:
-        cesb__has_no_income_before: false
-      student_2:
-        cesb__has_no_income_before: true
-  output:
-    cesb__is_high_school_grad: 
-      - false
-      - true
-
-- name: "is cesb benefit eligible"
-  period: "2020-08"
-  absolute_error_margin: 0
-  input: 
-    persons:
-      student_1:
-        cesb__is_student_2019_2020: true
-        cesb__is_high_school_grad: false
-      student_2:
-        cesb__is_student_2019_2020: true
-        cesb__is_high_school_grad: false
-      student_3:
-        cesb__is_student_2019_2020: true
         cesb__is_high_school_grad: true
-      student_4:
-        cesb__is_student_2019_2020: false
-        cesb__is_high_school_grad: false
+        income_status__has_lost_no_income: false
+      student_2:
+        cesb__is_high_school_grad: true
+        income_status__has_lost_no_income: true
   output:
-    cesb__is_eligible:
-      - true
-      - true
-      - true
+    cesb__is_eligible: 
       - false
+      - true
 
 - name: "cesb benefit should not be eligible after august"
   period: "2020-09"
@@ -67,19 +48,20 @@
     persons:
       student_5:
         cesb__is_student_2019_2020: true
-        cesb__is_high_school_grad: false
+        income_status__has_lost_all_income: true
       student_6:
-        cesb__is_student_2019_2020: true
-        cesb__is_high_school_grad: false
+        cesb__is_high_school_grad: true
+        income_status__has_lost_all_income: true
       student_7:
         cesb__is_student_2019_2020: true
-        cesb__is_high_school_grad: true
+        income_status__has_lost_no_income: true
       student_8:
-        cesb__is_student_2019_2020: false
-        cesb__is_high_school_grad: false
+        cesb__is_high_school_grad: true
+        income_status__has_lost_no_income: true
   output:
     cesb__is_eligible:
       - false
       - false
       - false
       - false
+
