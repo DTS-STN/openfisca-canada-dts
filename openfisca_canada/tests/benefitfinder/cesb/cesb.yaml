@@ -59,3 +59,27 @@
       - true
       - true
       - false
+
+- name: "cesb benefit should not be eligible after august"
+  period: "2020-09"
+  absolute_error_margin: 0
+  input:
+    persons:
+      student_5:
+        cesb__is_student_2019_2020: true
+        cesb__is_high_school_grad: false
+      student_6:
+        cesb__is_student_2019_2020: true
+        cesb__is_high_school_grad: false
+      student_7:
+        cesb__is_student_2019_2020: true
+        cesb__is_high_school_grad: true
+      student_8:
+        cesb__is_student_2019_2020: false
+        cesb__is_high_school_grad: false
+  output:
+    cesb__is_eligible:
+      - false
+      - false
+      - false
+      - false
