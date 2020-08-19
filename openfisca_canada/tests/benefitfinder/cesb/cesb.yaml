@@ -1,21 +1,21 @@
 ---
 
-- name: "is student 2019-2020"
+- name: "is eligible"
   period: "2020-08"
   absolute_error_margin: 0
   input: 
     persons:
       student_1:
-        cesb__is_student_2020_2021: true
+        cesb__is_student_2019_2020: true
         income_status__has_lost_all_income: true
       student_2:
-        cesb__is_high_school_grad: true
+        cesb__is_student_2020_2021: true
         income_status__has_lost_all_income: true
       student_3:
         cesb__is_student_2020_2021: true
         income_status__has_lost_no_income: true
       student_4:
-        cesb__is_high_school_grad: true
+        cesb__is_student_2020_2021: true
         income_status__has_lost_no_income: true
   output:
     cesb__is_eligible:
@@ -25,16 +25,16 @@
       - true
 
 
-- name: "is high school grad"
+- name: "is returning to school"
   period: "2020-08"
   absolute_error_margin: 0
   input: 
     persons:
       student_1:
-        cesb__is_high_school_grad: true
+        cesb__is_student_2020_2021: true
         income_status__has_lost_no_income: false
       student_2:
-        cesb__is_high_school_grad: true
+        cesb__is_student_2020_2021: true
         income_status__has_lost_no_income: true
   output:
     cesb__is_eligible: 
@@ -47,16 +47,16 @@
   input:
     persons:
       student_5:
-        cesb__is_student_2020_2021: true
+        cesb__is_student_2019_2020: true
         income_status__has_lost_all_income: true
       student_6:
-        cesb__is_high_school_grad: true
+        cesb__is_student_2020_2021: true
         income_status__has_lost_all_income: true
       student_7:
-        cesb__is_student_2020_2021: true
+        cesb__is_student_2019_2020: true
         income_status__has_lost_no_income: true
       student_8:
-        cesb__is_high_school_grad: true
+        cesb__is_student_2020_2021: true
         income_status__has_lost_no_income: true
   output:
     cesb__is_eligible:
