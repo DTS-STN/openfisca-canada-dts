@@ -1,7 +1,7 @@
 - name: "is student 2019-2020"
   period: "2020-08"
   absolute_error_margin: 0
-  input:
+  input: 
     persons:
       student_1:
         cesb__student_lost_job: true
@@ -25,21 +25,21 @@
 - name: "is high school grad"
   period: "2020-08"
   absolute_error_margin: 0
-  input:
+  input: 
     persons:
       student_1:
         cesb__has_no_income_before: false
       student_2:
         cesb__has_no_income_before: true
   output:
-    cesb__is_high_school_grad:
+    cesb__is_high_school_grad: 
       - false
       - true
 
 - name: "is cesb benefit eligible"
   period: "2020-08"
   absolute_error_margin: 0
-  input:
+  input: 
     persons:
       student_1:
         cesb__is_student_2019_2020: true
