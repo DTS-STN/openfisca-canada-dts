@@ -4,10 +4,10 @@ from openfisca_core.model_api import *
 from openfisca_canada.entities import Person
 
 class unemployment_benefits__rate_of_weekly_benefits(Variable):
-    value_type = int
+    value_type = float
     entity = Person
-    definition_period = Month
-    default_value = .55
+    definition_period = MONTH
+    default_value = 0.55
     label = 'rate of weekly ensurable earning'
 
     def formula(persons, period, parameters):
@@ -19,6 +19,6 @@ class unemployment_benefits__rate_of_weekly_benefits(Variable):
 class parental_benefits__elected_for_extended_benefits(Variable):
     value_type = bool
     entity = Person
-    definition_period = Month
+    definition_period = MONTH
     default_value = False
     label: 'claimant elects to have parental benefits'

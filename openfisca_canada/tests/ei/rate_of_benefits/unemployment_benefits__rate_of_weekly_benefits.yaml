@@ -9,5 +9,5 @@ input:
       parental_benefits__rate_of_weekly_benefits: true
 output:
   unemployment_benefits__rate_of_weekly_benefits: 
-    - .55
-    - .33
+    - 0.55
+    - 0.33
