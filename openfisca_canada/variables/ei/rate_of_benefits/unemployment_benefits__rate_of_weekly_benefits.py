@@ -4,10 +4,9 @@ from openfisca_core.model_api import *
 from openfisca_canada.entities import Person
 
 class unemployment_benefits__rate_of_weekly_benefits(Variable):
-    value_type = float
+    value_type = int
     entity = Person
     definition_period = MONTH
-    default_value = 0.55
     label = 'rate of weekly ensurable earning'
 
     def formula(persons, period, parameters):
