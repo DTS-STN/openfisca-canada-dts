@@ -1,0 +1,27 @@
+name: "parental benefit eligibility"
+period: 2020-08
+absolute_error_margin: 0
+input:
+  persons:
+    "eligible for parental benefits (new parent)":
+      parentl_benefits__is_caring_for_one_or_more_new_born_children: true
+      unemployment_benefits__is_major_attach_claimant: true
+    "eligible for parental benefits (new adoption)":
+      parentl_benefits__is_caring_for_one_or_more_adopted_children: true
+      unemployment_benefits__is_major_attach_claimant: true
+    "not eligible for parental benefits (new parent)":
+      parentl_benefits__is_caring_for_one_or_more_new_born_children: false
+      unemployment_benefits__is_major_attach_claimant: true
+    "not eligible for parental benefits (new adoption)":
+      parentl_benefits__is_caring_for_one_or_more_adopted_children: false
+      unemployment_benefits__is_major_attach_claimant: true
+    "not eligible for parental benefits (not major attached claimant)":
+      parentl_benefits__is_caring_for_one_or_more_adopted_children: true
+      unemployment_benefits__is_major_attach_claimant: false
+output:
+  parental_benefits__is_eligible_for_parental_benefit:
+    - true
+    - true
+    - false
+    - true
+    - false
