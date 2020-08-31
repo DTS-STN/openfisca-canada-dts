@@ -11,8 +11,8 @@ class unemployment_benefits__is_major_attached_claimant(Variable):
     label = "claimant is major attached claimant"
 
     def formula(persons, period, parameters):
-        return persons('unemployment_benefits__is_major_attached_claimant', period) + \
-            persons('parental_benefits__is_caring_for_one_or_more_new_born_children', period)
+        return persons('unemployment_benefits__has_more_than_minimum_hours_of_employment_in_qualifying_period', period) + \
+            persons('unemployment_benefits__has_more_than_minimum_weeks_of_employment_in_qualifying_period', period)
 
 class unemployment_benefits__has_more_than_minimum_hours_of_employment_in_qualifying_period(Variable):
     value_type = bool
