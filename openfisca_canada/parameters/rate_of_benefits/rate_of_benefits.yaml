@@ -1,0 +1,11 @@
+unemployment_benefits__rate_of_weekly_benefit:
+  description: basic rate of insurable earning
+  values: 
+    1940-01-01:
+      value: .55
+
+unemployment_benefits__rate_of_weekly_benefit_parental_extended:
+  description: rate of insurable earning of the claimant elects to have extended benefits under section 23 (parental benefits)
+  values:
+    2017-12-03:
+      value: .33
