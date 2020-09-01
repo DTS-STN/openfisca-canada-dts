@@ -1,0 +1,12 @@
+ 
+unemployment_benefits__minimum_insurable_hours_of_employment:
+  description: Minimal insurable hours to qualify as a major attached claimant
+  values: 
+    2020-08-01:
+      value: 600
+
+unemployment_benefits__minimum_insurable_weeks_of_employment:
+  description: Minimal insurable weeks to qualify as a major attached claimant
+  values:
+    2020-08-01:
+      value: 20

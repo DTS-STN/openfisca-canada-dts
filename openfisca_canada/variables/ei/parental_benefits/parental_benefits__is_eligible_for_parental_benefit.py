@@ -17,13 +17,6 @@ class parental_benefits__is_caring_for_one_or_more_adopted_children(Variable):
     default_value = False
     label = "claimant caring for one or more adopted children"
 
-class unemployment_benefits__is_major_attached_claimant(Variable):
-    value_type = bool
-    entity = Person
-    definition_period = MONTH
-    default_value = False
-    label = "claimant is major attached claimant"
-
 class parental_benefits__is_eligible_for_parental_benefit(Variable):
     value_type = bool
     entity = Person

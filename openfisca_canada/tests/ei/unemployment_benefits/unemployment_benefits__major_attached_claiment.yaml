@@ -1,0 +1,23 @@
+name: "Major attached claimant"
+period: 2020-08
+absolute_error_margin: 0
+input:
+  persons:
+    "Claimant does not have minimum hours or weeks of insurable employment":
+      unemployment_benefits__has_more_than_minimum_hours_of_employment_in_qualifying_period: false
+      unemployment_benefits__has_more_than_minimum_weeks_of_employment_in_qualifying_period: false
+    "Claimant has minimum hours of insurable employment":
+      unemployment_benefits__has_more_than_minimum_hours_of_employment_in_qualifying_period: true
+      unemployment_benefits__has_more_than_minimum_weeks_of_employment_in_qualifying_period: false
+    "Claimant has minimum weeks of insurable employment":
+      unemployment_benefits__has_more_than_minimum_hours_of_employment_in_qualifying_period: false
+      unemployment_benefits__has_more_than_minimum_weeks_of_employment_in_qualifying_period: true
+    "Claimant has minimum hours and weeks of insurable employment":
+      unemployment_benefits__has_more_than_minimum_hours_of_employment_in_qualifying_period: true
+      unemployment_benefits__has_more_than_minimum_weeks_of_employment_in_qualifying_period: true
+output:
+  unemployment_benefits__is_major_attached_claimant:
+    - false
+    - true
+    - true
+    - true
