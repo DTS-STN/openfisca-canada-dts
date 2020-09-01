@@ -1,0 +1,72 @@
+- name: "Test 1: is within qualifying weeks to due date"
+  period: "2020-08"
+  absolute_error_margin: 0
+  input:
+    persons:
+      "is within qualifying weeks to due date":
+        maternity_benefits__weeks_to_due_date: 12
+  output:
+    maternity_benefits__is_within_qualifying_weeks_to_due_date: true
+
+- name: "Test 2: is not within qualifying weeks to due date"
+  period: "2020-08"
+  absolute_error_margin: 0
+  input:
+    persons:
+      "is not within qualifying weeks to due date":
+        maternity_benefits__weeks_to_due_date: 13
+  output:
+    maternity_benefits__is_within_qualifying_weeks_to_due_date: false
+
+- name: "Test 3: is within qualifying weeks after birth of child"
+  period: "2020-08"
+  absolute_error_margin: 0
+  input:
+    persons:
+      "is within qualifying weeks after birth":
+        maternity_benefits__weeks_after_birth_of_child: 17
+  output:
+    maternity_benefits__is_within_qualifying_weeks_after_birth_of_child: true
+
+- name: "Test 4: is not within qualifying weeks after birth of child"
+  period: "2020-08"
+  absolute_error_margin: 0
+  input:
+    persons:
+      "is not within qualifying weeks after birth":
+        maternity_benefits__weeks_after_birth_of_child: 18
+  output:
+    maternity_benefits__is_within_qualifying_weeks_after_birth_of_child: false
+
+- name: "Test 5: maternity benefit is eligible from being pregnant"
+  period: "2020-08"
+  absolute_error_margin: 0
+  input:
+    persons:
+      "is eligible from being pregnant":
+        maternity_benefits__is_within_qualifying_weeks_to_due_date: true
+        maternity_benefits__is_within_qualifying_weeks_after_birth_of_child: false
+  output:
+    maternity_benefits__is_eligible_for_maternity_benefit: true
+
+- name: "Test 6: maternity benefit is eligible from giving birth"
+  period: "2020-08"
+  absolute_error_margin: 0
+  input:
+    persons:
+      "is eligible from giving birth":
+        maternity_benefits__is_within_qualifying_weeks_to_due_date: false
+        maternity_benefits__is_within_qualifying_weeks_after_birth_of_child: true
+  output:
+    maternity_benefits__is_eligible_for_maternity_benefit: true
+
+- name: "Test 7: maternity benefit is not eligible"
+  period: "2020-08"
+  absolute_error_margin: 0
+  input:
+    persons:
+      "is not eligible for parental benefits":
+        maternity_benefits__is_within_qualifying_weeks_to_due_date: false
+        maternity_benefits__is_within_qualifying_weeks_after_birth_of_child: false
+  output:
+    maternity_benefits__is_eligible_for_maternity_benefit: false
