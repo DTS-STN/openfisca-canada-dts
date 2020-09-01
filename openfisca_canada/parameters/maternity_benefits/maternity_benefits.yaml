@@ -1,0 +1,9 @@
+maternity_benefits__qualifying_weeks_to_due_date:
+  values:
+    2020-08-01:
+      value: 12
+
+maternity_benefits__qualifying_weeks_after_birth_of_child:
+  values:
+    2020-08-01:
+      value: 17
