@@ -3,7 +3,7 @@
   absolute_error_margin: 0
   input:
     persons:
-      "is within qualifying weeks":
+      "is within qualifying weeks to due date":
         maternity_benefits__weeks_to_due_date: 12
   output:
     maternity_benefits__is_within_qualifying_weeks_to_due_date: true
@@ -13,7 +13,7 @@
   absolute_error_margin: 0
   input:
     persons:
-      "is not within qualifying weeks":
+      "is not within qualifying weeks to due date":
         maternity_benefits__weeks_to_due_date: 13
   output:
     maternity_benefits__is_within_qualifying_weeks_to_due_date: false
@@ -23,7 +23,7 @@
   absolute_error_margin: 0
   input:
     persons:
-      "is within qualifying weeks":
+      "is within qualifying weeks after birth":
         maternity_benefits__weeks_after_birth_of_child: 17
   output:
     maternity_benefits__is_within_qualifying_weeks_after_birth_of_child: true
@@ -33,7 +33,7 @@
   absolute_error_margin: 0
   input:
     persons:
-      "is not within qualifying weeks":
+      "is not within qualifying weeks after birth":
         maternity_benefits__weeks_after_birth_of_child: 18
   output:
     maternity_benefits__is_within_qualifying_weeks_after_birth_of_child: false
