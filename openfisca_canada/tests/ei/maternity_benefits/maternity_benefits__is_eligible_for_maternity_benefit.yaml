@@ -65,7 +65,7 @@
   absolute_error_margin: 0
   input:
     persons:
-      "is not eligible":
+      "is not eligible for parental benefits":
         maternity_benefits__is_within_qualifying_weeks_to_due_date: false
         maternity_benefits__is_within_qualifying_weeks_after_birth_of_child: false
   output:
