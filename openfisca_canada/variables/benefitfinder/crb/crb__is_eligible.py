@@ -8,3 +8,6 @@ class crb__is_eligible(Variable):
     entity = Person
     definition_period = MONTH
     label = u"Person is eligible for CRB benefit"
+
+    #def formula(persons, period, parameters):
+    #    return true if any of 1,2,3,6,8,9/1b,2b,3b,4b are selected
