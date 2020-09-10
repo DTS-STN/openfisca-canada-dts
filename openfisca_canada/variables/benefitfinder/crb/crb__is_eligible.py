@@ -16,7 +16,7 @@ class crb__is_eligible(Variable):
         persons("income_status_reason__has_employer_closed", period) + \
         persons("income_status_reason__is_self_employed", period) + \
         persons("income_status_reason__is_quarantined", period) + \
-        persons("is_college_or_university_student_during_2019_2020_year_and_cannot_find_work", period) + \
+        persons("income_status_reason__is_college_or_university_student_during_2019_2020_year_and_cannot_find_work", period) + \
         persons("income_status_reason__has_ei_recent_claim_ended", period) + \
         persons("income_status_reason__has_hours_reduced", period) + \
         persons("income_status_reason__employed_lost_a_job", period) + \

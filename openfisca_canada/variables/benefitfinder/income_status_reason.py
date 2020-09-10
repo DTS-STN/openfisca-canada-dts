@@ -116,7 +116,7 @@ class income_status_reason__is_self_employed_with_some_income(Variable):
     label = u"is self employed person with some income"
     reference = ""
 
-class is_college_or_university_student_during_2019_2020_year_and_cannot_find_work(Variable):
+class income_status_reason__is_college_or_university_student_during_2019_2020_year_and_cannot_find_work(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
