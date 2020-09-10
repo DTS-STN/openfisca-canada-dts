@@ -1,0 +1,49 @@
+- name: "is eligible"
+  period: "2020-08"
+  absolute_error_margin: 0
+  input: 
+    persons:
+      person_1:
+        income_status_reason__has_lost_job: true
+      person_2:
+        income_status_reason__has_employer_closed: true
+      person_3:
+        income_status_reason__is_self_employed: true
+      person_4:
+        income_status_reason__is_quarantined: true
+      person_5:
+        income_status_reason__is_college_or_university_student_during_2019_2020_year_and_cannot_find_work: true
+      person_6:
+        income_status_reason__has_ei_recent_claim_ended: true
+      person_7:
+        income_status_reason__has_hours_reduced: true
+      person_8:
+        income_status_reason__employed_lost_a_job: true
+      person_9:
+        income_status_reason__is_self_employed_with_some_income: true
+      person_10:
+        income_status_reason__is_retired_and_lost_part_time_work: true
+      person_11:
+        income_status_reason__has_lost_job: false
+        income_status_reason__has_employer_closed: false
+        income_status_reason__is_self_employed: false
+        income_status_reason__is_quarantined: false
+        income_status_reason__is_college_or_university_student_during_2019_2020_year_and_cannot_find_work: false
+        income_status_reason__has_ei_recent_claim_ended: false
+        income_status_reason__has_hours_reduced: false
+        income_status_reason__employed_lost_a_job: false
+        income_status_reason__is_self_employed_with_some_income: false
+        income_status_reason__is_retired_and_lost_part_time_work: false
+  output:
+    crb__is_eligible:
+      - true
+      - true
+      - true
+      - true
+      - true
+      - true
+      - true
+      - true
+      - true
+      - true
+      - false
