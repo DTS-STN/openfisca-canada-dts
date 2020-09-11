@@ -11,7 +11,7 @@ class rent__is_eligible(Variable):
     definition_period = MONTH
 
     def formula(persons, period, parameters):
-        return persons("rent__has_need_for_rent_help", period)
+        return parameters(period).benefitfinder.eligible_periods * persons("rent__has_need_for_rent_help", period)
     
 class rent__has_need_for_rent_help(Variable):
     value_type = bool
