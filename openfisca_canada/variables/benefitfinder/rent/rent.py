@@ -10,10 +10,7 @@ class rent__is_eligible(Variable):
     label = u"Is eligible for rent help"
     definition_period = MONTH
 
-    def formula_2020_08(persons, period, parameters):
-        return parameters(period).benefitfinder.is_eligible__benefits * persons("rent__has_need_for_rent_help", period)
-
-    def formula_2020_10(persons, period, parameters):
+    def formula(persons, period, parameters):
         return parameters(period).benefitfinder.is_eligible__benefits * persons("rent__has_need_for_rent_help", period)
     
 class rent__has_need_for_rent_help(Variable):
