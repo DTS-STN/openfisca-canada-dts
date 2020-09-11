@@ -10,8 +10,11 @@ class student_loan__is_eligible(Variable):
     label = u"Students is eligible for a 6 months deferral"
     reference = u"to be linked"
 
-    def formula(persons, period, parameters):
-        return persons("student_loan__has_student_debt",period)
+    def formula_2020_08(persons, period, parameters):
+        return parameters(period).benefitfinder.is_eligible__benefits * persons("student_loan__has_student_debt",period)
+    
+    def formula_2020_10(persons, period, parameters):
+        return parameters(period).benefitfinder.is_eligible__benefits * persons("student_loan__has_student_debt",period)
 
 class student_loan__has_student_debt(Variable):
     value_type = bool

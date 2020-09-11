@@ -22,3 +22,14 @@
   output:
     rent__is_eligible:
       - false   
+
+- name: "rent help not available starting October 1, 2020"
+  period: 2020-10
+  absolute_error_margin: 0
+  input:
+    persons:
+      person_has_no_need_of_rent_help:
+        rent__has_need_for_rent_help: true
+  output:
+    rent__is_eligible:
+      - false 
