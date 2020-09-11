@@ -1,0 +1,9 @@
+description: benefits eligible periods
+metadata:
+  unit: bool
+values:
+  2020-09:
+    value: true
+  # benefit expires starting following period
+  2020-10:
+    value: false
