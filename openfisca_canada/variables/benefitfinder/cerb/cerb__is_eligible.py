@@ -17,7 +17,8 @@ class cerb__is_eligible(Variable):
                 persons('cerb__is_eligible_lost_some_income_quarantine', period) +\
                 persons('cerb__is_eligible_lost_all_income_self_employed_closed_unpaid_leave_parental_leave_recent_ei_claim', period) +\
                 persons('cerb__is_eligible_lost_some_income_self_employed_1000_hours_or_less', period) +\
-                persons('cerb__is_eligible_gross_income_over_5k', period)
+                persons('cerb__is_eligible_gross_income_over_5k', period) +\
+                persons('cerb__is_eligible_lost_all_income_lost_job_and_no_income_quarantine', period)   
 
         
 class cerb__is_eligible_lost_all_income_lost_job_or_employer_closed(Variable):
@@ -30,7 +31,17 @@ class cerb__is_eligible_lost_all_income_lost_job_or_employer_closed(Variable):
     def formula(persons, period, parameters):
         return persons('income_status__has_lost_all_income', period) * (persons('income_status_reason__has_lost_job', period) +\
             persons('income_status_reason__has_employer_closed', period))
-        
+
+class cerb__is_eligible_lost_all_income_lost_job_and_no_income_quarantine(Variable):
+    value_type = bool
+    entity = Person
+    definition_period = MONTH
+    label = u"is person eligible for cerb?"
+    reference = "tbd"
+
+    def formula(persons, period, parameters):
+        return persons('income_status__has_lost_all_income', period) * (persons('income_status_reason__is_quarantined', period))
+
 class cerb__is_eligible_lost_some_income_reduced_hours_1000_or_less(Variable):
     value_type = bool
     entity = Person
