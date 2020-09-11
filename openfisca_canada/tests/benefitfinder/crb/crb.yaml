@@ -1,4 +1,4 @@
-- name: "is eligible"
+- name: "crb is eligible"
   period: "2020-08"
   absolute_error_margin: 0
   input: 
