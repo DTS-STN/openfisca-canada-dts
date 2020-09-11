@@ -2,7 +2,7 @@ description: Benefit is not available after August 2020
 metadata:
   reference: https://law.gov.example/basic-income/amount
   unit: bool
-values:
+values: 
   # This parameter is only defined since the 1st of Dec 2015.
   2020-03:
     value: true

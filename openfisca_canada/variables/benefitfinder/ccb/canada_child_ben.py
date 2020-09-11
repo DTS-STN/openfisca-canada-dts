@@ -9,7 +9,7 @@ class canada_child_benefit__is_eligible(Variable):
     definition_period = MONTH
     reference = u"TODO"
     def formula(persons, period, parameters):
-        return persons("canada_child_benefit__yes_or_unsure",period)
+        return parameters(period).benefitfinder.eligible_periods * persons("canada_child_benefit__yes_or_unsure",period)
         #  + \
         # persons("some_income__1001_or_more",period)
 
