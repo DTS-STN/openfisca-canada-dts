@@ -1,7 +1,7 @@
 ---   
      #selects Yes or Unsure for CCB
     - name: "canada child benefit (ccb) - yes or unsure"
-      period: 2020-08
+      period: 2020-09
       absolute_error_margin: 0
       input:
         canada_child_benefit__yes_or_unsure: true
@@ -9,7 +9,7 @@
         canada_child_benefit__is_eligible: true
         # selects No for CCB
     - name: "canada child benefit (ccb) - no"
-      period: 2020-08
+      period: 2020-09
       absolute_error_margin: 0
       input:
         canada_child_benefit__yes_or_unsure: false

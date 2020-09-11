@@ -1,5 +1,5 @@
 - name: "Student Loan Deferral elegible"
-  period: 2020-08
+  period: 2020-09
   absolute_error_margin: 0
   input:
     persons:
@@ -9,7 +9,7 @@
     student_loan__is_eligible: true
 
 - name: "Student not in debt"
-  period: 2020-08
+  period: 2020-09
   absolute_error_margin: 0
   input:
     persons:
@@ -19,7 +19,7 @@
     student_loan__is_eligible: false
 
 - name: "Student by Name"
-  period: 2020-08
+  period: 2020-09
   absolute_error_margin: 0
   input:
     persons:
