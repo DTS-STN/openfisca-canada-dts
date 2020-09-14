@@ -118,6 +118,18 @@
         dtc__is_eligible: false   
         dtc__is_eligible_for_dtc_and_oas: false
 
+-   name: "Person has document and oas, but benefits ends"
+    period: 2020-10
+    absolute_error_margin: 0
+    input:
+        persons:
+            has_no_document_has_no_oas:
+                dtc__has_documented_disability: true
+                oas__is_eligible: true
+    output:
+        dtc__is_eligible: false   
+        dtc__is_eligible_for_dtc_and_oas: false
+
 -   name: "DTC parent and child have document, not available starting October 1, 2020"
     period: 2020-10
     absolute_error_margin: 0

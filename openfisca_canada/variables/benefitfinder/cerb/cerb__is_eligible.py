@@ -10,6 +10,7 @@ class cerb__is_eligible(Variable):
     default_value = False
     label = u"is person eligible for cerb"
     reference = "tbd"
+    end = "2020-09-26"
 
     def formula(persons, period, parameters):
         return persons('cerb__is_eligible_lost_all_income_lost_job_or_employer_closed', period) +\
