@@ -11,7 +11,7 @@ class student_loan__is_eligible(Variable):
     reference = u"to be linked"
 
     def formula(persons, period, parameters):
-        return persons("student_loan__has_student_debt",period)
+        return parameters(period).benefitfinder.eligible_periods * persons("student_loan__has_student_debt",period)
 
 class student_loan__has_student_debt(Variable):
     value_type = bool
