@@ -10,6 +10,6 @@ class crcb__is_eligible(Variable):
     label = u"Person is eligible for CRCB benefit"
 
     #Your childs or dependents school, daycare or care facility closed due to covid-19, you're on unpaid leave to take care for a child or sick person
-    def formula(persons, period, parameters):
+    def formula_2020_10(persons, period, parameters):
         return persons("income_status_reason__has_child_or_dependant_with_closed_school_or_daycare_or_facility_due_to_c19", period) + \
         persons("income_status_reason__has_unpaid_leave_to_care_for_child_or_sick", period)
