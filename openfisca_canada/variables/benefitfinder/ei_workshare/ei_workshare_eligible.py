@@ -8,6 +8,8 @@ class ei_workshare__is_eligible(Variable):
     label = u"Is this person eligible for the EI Workshare program?"
     definition_period = MONTH
     reference = u"TODO"
+    end = "2020-09-30"
+    
     def formula(persons, period, parameters):
         return persons("has_some_income_1001_or_more_reduced_hours",period)
 

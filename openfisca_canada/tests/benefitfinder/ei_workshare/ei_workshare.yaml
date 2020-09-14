@@ -14,3 +14,11 @@
         has_some_income_1001_or_more_reduced_hours: false
       output:
         ei_workshare__is_eligible: false
+
+    - name: "EI Workshare not available starting October 1, 2020"
+      period: 2020-10
+      absolute_error_margin: 0
+      input:
+        has_some_income_1001_or_more_reduced_hours: true
+      output:
+        ei_workshare__is_eligible: false

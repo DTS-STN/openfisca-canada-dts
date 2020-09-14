@@ -8,8 +8,10 @@ class canada_child_benefit__is_eligible(Variable):
     label = u"Is this person eligible for the EI Workshare?"
     definition_period = MONTH
     reference = u"TODO"
+    end = "2020-09-30"
+    
     def formula(persons, period, parameters):
-        return parameters(period).benefitfinder.eligible_periods * persons("canada_child_benefit__yes_or_unsure",period)
+        return persons("canada_child_benefit__yes_or_unsure",period)
         #  + \
         # persons("some_income__1001_or_more",period)
 

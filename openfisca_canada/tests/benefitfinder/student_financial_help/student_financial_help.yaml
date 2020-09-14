@@ -1,13 +1,27 @@
-name: "student financial help"
-period: "2020-08"
-absolute_error_margin: 0
-input:
-  persons:
-    student_1:
-      student_financial_help__has_plan_for_school: true
-    student_2:
-      student_financial_help__has_plan_for_school: false
-output:
-  student_financial_help__is_eligible:
-    - true
-    - false
+- name: "student financial help"
+  period: "2020-08"
+  absolute_error_margin: 0
+  input:
+    persons:
+      student_1:
+        student_financial_help__has_plan_for_school: true
+      student_2:
+        student_financial_help__has_plan_for_school: false
+  output:
+    student_financial_help__is_eligible:
+      - true
+      - false
+
+- name: "student financial help not available stating October 1, 2020"
+  period: "2020-10"
+  absolute_error_margin: 0
+  input:
+    persons:
+      student_1:
+        student_financial_help__has_plan_for_school: true
+      student_2:
+        student_financial_help__has_plan_for_school: false
+  output:
+    student_financial_help__is_eligible:
+      - false
+      - false

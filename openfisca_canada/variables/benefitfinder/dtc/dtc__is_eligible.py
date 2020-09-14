@@ -9,6 +9,7 @@ class dtc__is_eligible(Variable):
     entity = Person
     definition_period = MONTH
     label = u"Is person eligible for a disibility tax credit"
+    end = "2020-09-30"
 
     def formula(persons, period, parameters):
         #if persons.family.nb_persons(role=Family.CHILD).any():
@@ -23,6 +24,7 @@ class dtc__is_eligible_for_dtc_and_oas(Variable):
     entity = Person
     definition_period = MONTH
     label = u"Is person eligible for a disibility tax credit and old age security"
+    end = "2020-09-30"
 
     def formula(persons, period, parameters):
         return persons('dtc__has_documented_disability', period) *\

@@ -9,6 +9,7 @@ class mortgage_deferral__is_eligible(Variable):
     default_value = False
     label = u"Mortgage worries, talk to your bank to get 6 months deferral"
     reference = u"to be linked"
+    end = "2020-09-30"
 
     def formula(persons, period, parameters):
         return persons("mortgage_deferral__has_mortgage_payments",period)

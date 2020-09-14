@@ -9,6 +9,7 @@ class riff__is_eligible(Variable):
     default_value = False
     label = u"Is eligible for riff"
     definition_period = MONTH
+    end = "2020-09-30"
 
     def formula(persons, period, parameters):
         return persons("riff__has_riff", period)
