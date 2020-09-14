@@ -9,6 +9,7 @@ class student_financial_help__is_eligible(Variable):
     entity = Person
     definition_period = MONTH
     label = u"student financial help eligibility"
+    end = "2020-09-30"
 
     def formula(persons, period, parameters):
         return persons("student_financial_help__has_plan_for_school", period)

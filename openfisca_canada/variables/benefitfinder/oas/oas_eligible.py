@@ -9,6 +9,7 @@ class oas__is_eligible(Variable):
     entity = Person
     definition_period = MONTH
     label = u"oas is eligible"
+    end = "2020-09-30"
 
     def formula(persons, period, parameters):
         return persons("has_oas", period) + persons("has_allowance", period) + persons("has_allowance_for_survivor", period)

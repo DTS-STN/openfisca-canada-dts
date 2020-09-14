@@ -16,7 +16,7 @@
       output:
         canada_child_benefit__is_eligible: false
 
-    - name: "canada child benefit (ccb) not available starting October 1"
+    - name: "canada child benefit (ccb) not available starting October 1, 2020"
       period: 2020-10
       absolute_error_margin: 0
       input:

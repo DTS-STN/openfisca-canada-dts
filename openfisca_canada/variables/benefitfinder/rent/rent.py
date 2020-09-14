@@ -9,6 +9,7 @@ class rent__is_eligible(Variable):
     default_value = False
     label = u"Is eligible for rent help"
     definition_period = MONTH
+    end = "2020-09-30"
 
     def formula(persons, period, parameters):
         return parameters(period).benefitfinder.eligible_periods * persons("rent__has_need_for_rent_help", period)
