@@ -11,7 +11,7 @@ class student_financial_help__is_eligible(Variable):
     label = u"student financial help eligibility"
 
     def formula(persons, period, parameters):
-        return persons("student_financial_help__has_plan_for_school", period)
+        return parameters(period).benefitfinder.eligible_periods * persons("student_financial_help__has_plan_for_school", period)
 
 class student_financial_help__has_plan_for_school(Variable):
     value_type = bool

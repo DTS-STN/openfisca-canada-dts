@@ -1,5 +1,5 @@
 - name: "Mortgage Deferral elegible"
-  period: 2020-08
+  period: 2020-09
   absolute_error_margin: 0
   input:
     persons:
@@ -9,7 +9,7 @@
     mortgage_deferral__is_eligible: true
 
 - name: "Mortgage not an issue"
-  period: 2020-08
+  period: 2020-09
   absolute_error_margin: 0
   input:
     persons:
@@ -19,7 +19,7 @@
     mortgage_deferral__is_eligible: false
 
 - name: "Mortagage tests by Name"
-  period: 2018-08
+  period: 2020-09
   absolute_error_margin: 0
   input:
     persons:
@@ -31,3 +31,13 @@
     mortgage_deferral__is_eligible:
       - false
       - true
+
+- name: "Mortgage deferral not available starting October 1, 2020"
+  period: 2020-10
+  absolute_error_margin: 0
+  input:
+    persons:
+      mortgage_deferral:
+        mortgage_deferral__has_mortgage_payments: true
+  output:
+    mortgage_deferral__is_eligible: false

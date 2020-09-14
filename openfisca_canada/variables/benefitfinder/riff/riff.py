@@ -11,7 +11,7 @@ class riff__is_eligible(Variable):
     definition_period = MONTH
 
     def formula(persons, period, parameters):
-        return persons("riff__has_riff", period)
+        return parameters(period).benefitfinder.eligible_periods * persons("riff__has_riff", period)
     
 class riff__has_riff(Variable):
     value_type = bool

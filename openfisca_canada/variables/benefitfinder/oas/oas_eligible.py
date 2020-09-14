@@ -11,4 +11,5 @@ class oas__is_eligible(Variable):
     label = u"oas is eligible"
 
     def formula(persons, period, parameters):
-        return persons("has_oas", period) + persons("has_allowance", period) + persons("has_allowance_for_survivor", period)
+        return parameters(period).benefitfinder.eligible_periods * \
+            (persons("has_oas", period) + persons("has_allowance", period) + persons("has_allowance_for_survivor", period))

@@ -9,7 +9,7 @@ class ei_workshare__is_eligible(Variable):
     definition_period = MONTH
     reference = u"TODO"
     def formula(persons, period, parameters):
-        return persons("has_some_income_1001_or_more_reduced_hours",period)
+        return parameters(period).benefitfinder.eligible_periods * persons("has_some_income_1001_or_more_reduced_hours",period)
 
 class has_some_income_1001_or_more_reduced_hours(Variable):
     value_type = bool

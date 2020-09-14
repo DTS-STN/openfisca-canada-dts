@@ -1,5 +1,5 @@
 -   name: "DTC parent and child have document"
-    period: 2020-08
+    period: 2020-09
     absolute_error_margin: 0
     input:
         persons:
@@ -17,7 +17,7 @@
                 dtc__is_eligible: true   
 
 -   name: "DTC child has document"
-    period: 2020-08
+    period: 2020-09
     absolute_error_margin: 0
     input:
         persons:
@@ -35,7 +35,7 @@
                 dtc__is_eligible: true   
 
 -   name: "DTC parent has document"
-    period: 2020-08
+    period: 2020-09
     absolute_error_margin: 0
     input:
         persons:
@@ -53,7 +53,7 @@
                 dtc__is_eligible: true  
 
 -   name: "DTC no document"
-    period: 2020-08
+    period: 2020-09
     absolute_error_margin: 0
     input:
         persons:
@@ -71,7 +71,7 @@
                 dtc__is_eligible: false   
 
 -   name: "Person has document and has oas"
-    period: 2020-08
+    period: 2020-09
     absolute_error_margin: 0
     input:
         persons:
@@ -83,7 +83,7 @@
         dtc__is_eligible_for_dtc_and_oas: true
 
 -   name: "Person has no document and has oas"
-    period: 2020-08
+    period: 2020-09
     absolute_error_margin: 0
     input:
         persons:
@@ -95,7 +95,7 @@
         dtc__is_eligible_for_dtc_and_oas: false
 
 -   name: "Person has document and has no oas"
-    period: 2020-08
+    period: 2020-09
     absolute_error_margin: 0
     input:
         persons:
@@ -107,7 +107,7 @@
         dtc__is_eligible_for_dtc_and_oas: false
 
 -   name: "Person has no document and has no oas"
-    period: 2020-08
+    period: 2020-09
     absolute_error_margin: 0
     input:
         persons:
@@ -117,3 +117,21 @@
     output:
         dtc__is_eligible: false   
         dtc__is_eligible_for_dtc_and_oas: false
+
+-   name: "DTC not available starting October 1, 2020"
+    period: 2020-10
+    absolute_error_margin: 0
+    input:
+        persons:
+            parent:
+                dtc__has_documented_disability: true
+            child:
+                dtc__has_documented_disability: true
+        families:
+            f1:
+                children: ["child"]
+                parents: ["parent"]
+    output:
+        persons:
+            parent:
+                dtc__is_eligible: false  

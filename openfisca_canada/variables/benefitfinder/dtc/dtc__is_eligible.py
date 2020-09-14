@@ -13,10 +13,10 @@ class dtc__is_eligible(Variable):
     def formula(persons, period, parameters):
         #if persons.family.nb_persons(role=Family.CHILD).any():
         if persons.has_role(Family.PARENT).any():
-            return persons('dtc__has_documented_disability', period) +\
-                persons.family.any(persons.family.members('dtc__has_documented_disability', period), role=Family.CHILD)
+            return parameters(period).benefitfinder.eligible_periods * (persons('dtc__has_documented_disability', period) +\
+                persons.family.any(persons.family.members('dtc__has_documented_disability', period), role=Family.CHILD))
         else:
-            return persons('dtc__has_documented_disability', period)
+            return parameters(period).benefitfinder.eligible_periods * persons('dtc__has_documented_disability', period)
 
 class dtc__is_eligible_for_dtc_and_oas(Variable):
     value_type = bool
@@ -25,5 +25,5 @@ class dtc__is_eligible_for_dtc_and_oas(Variable):
     label = u"Is person eligible for a disibility tax credit and old age security"
 
     def formula(persons, period, parameters):
-        return persons('dtc__has_documented_disability', period) *\
-            persons('oas__is_eligible', period)
+        return parameters(period).benefitfinder.eligible_periods * (persons('dtc__has_documented_disability', period) *\
+            persons('oas__is_eligible', period))

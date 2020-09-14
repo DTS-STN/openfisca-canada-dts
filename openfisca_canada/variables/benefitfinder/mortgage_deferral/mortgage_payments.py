@@ -11,7 +11,7 @@ class mortgage_deferral__is_eligible(Variable):
     reference = u"to be linked"
 
     def formula(persons, period, parameters):
-        return persons("mortgage_deferral__has_mortgage_payments",period)
+        return parameters(period).benefitfinder.eligible_periods * persons("mortgage_deferral__has_mortgage_payments",period)
 
 class mortgage_deferral__has_mortgage_payments(Variable):
     value_type = bool
