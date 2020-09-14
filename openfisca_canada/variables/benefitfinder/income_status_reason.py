@@ -99,3 +99,27 @@ class income_status_reason__is_gross_income_over_5k(Variable):
     definition_period = MONTH
     default_value = False
     reference = u"TODO"
+
+class income_status_reason__is_retired_and_lost_part_time_work(Variable):
+    value_type = bool
+    entity = Person
+    label = u"Is persons retired and lost part time work"
+    definition_period = MONTH
+    default_value = False
+    reference = u"TODO"
+
+class income_status_reason__is_self_employed_with_some_income(Variable):
+    value_type = bool
+    entity = Person
+    definition_period = MONTH
+    default_value = False
+    label = u"is self employed person with some income"
+    reference = ""
+
+class income_status_reason__is_college_or_university_student_during_2019_2020_year_and_cannot_find_work(Variable):
+    value_type = bool
+    entity = Person
+    definition_period = MONTH
+    default_value = False
+    label = u"is college or university student during 2019-2020 year and cannot find work due to covid"
+    reference = ""
