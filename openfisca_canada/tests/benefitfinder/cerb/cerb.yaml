@@ -266,6 +266,10 @@
         income_status_reason__has_unpaid_leave_to_care_for_child_or_sick: true
         income_status__has_lost_all_income: true
 
+      person_is_quarantine_no_income:
+        income_status__has_lost_all_income: true
+        income_status_reason__is_quarantined: true
+
       person_is_being_paid:
         income_status_reason__has_lost_job: false
         income_status_reason__has_employer_closed: false
@@ -286,6 +290,7 @@
       - true   # recent parental leave, can't return to work
       - true   # recent ei claim ended
       - true   # person sick or quarantined or unpaid leave
+      - true   # person is quarantined no income
       - false  # person is being paid #
      # - true   #person provided no responses
 
