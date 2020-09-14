@@ -1,6 +1,6 @@
-# OpenFisca Canada 
+# OpenFisca Canada
 
-## Writing the Legislation
+## Writing the Legislation 
 
 This is an experiment. We're coding pieces of Canada's legislation, regulation, and some government policy into rules that run in the Open Fisca calculation engine. We've released all the code here, for anyone to use.
 
