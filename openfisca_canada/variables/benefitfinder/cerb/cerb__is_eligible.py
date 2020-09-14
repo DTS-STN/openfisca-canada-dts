@@ -40,7 +40,7 @@ class cerb__is_eligible_lost_all_income_lost_job_and_no_income_quarantine(Variab
     reference = "tbd"
 
     def formula(persons, period, parameters):
-        return persons('income_status__has_lost_all_income', period) * (persons('income_status_reason__is_quarantined', period))
+        return persons('income_status__has_lost_all_income', period) * persons('income_status_reason__is_quarantined', period)
 
 class cerb__is_eligible_lost_some_income_reduced_hours_1000_or_less(Variable):
     value_type = bool
