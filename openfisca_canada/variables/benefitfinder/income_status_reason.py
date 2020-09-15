@@ -123,3 +123,11 @@ class income_status_reason__is_college_or_university_student_during_2019_2020_ye
     default_value = False
     label = u"is college or university student during 2019-2020 year and cannot find work due to covid"
     reference = ""
+
+class income_status_reason__has_child_or_dependant_with_closed_school_or_daycare_or_facility_due_to_c19(Variable):
+    value_type = bool
+    entity = Person
+    definition_period = MONTH
+    default_value = False
+    label = u"has child or dependant with closed school or daycare or facility due to covid 19"
+    reference = ""
