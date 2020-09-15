@@ -15,3 +15,16 @@
       - true
       - true
       - false
+- name: "crcb before 2020-10"
+  period: "2020-09"
+  absolute_error_margin: 0
+  input: 
+    persons:
+      person_1:
+        income_status_reason__has_child_or_dependant_with_closed_school_or_daycare_or_facility_due_to_c19: true
+      person_2:
+        income_status_reason__has_unpaid_leave_to_care_for_child_or_sick: true
+  output:
+    crcb__is_eligible:
+      - false
+      - false
