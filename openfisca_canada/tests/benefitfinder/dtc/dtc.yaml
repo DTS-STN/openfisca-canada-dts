@@ -59,8 +59,10 @@
         persons:
             parent:
                 dtc__has_documented_disability: false
+                dtc__has_disability: true
             child:
                 dtc__has_documented_disability: false
+                dtc__has_disability: true
         families:
             f1:
                 children: ["child"]
@@ -68,7 +70,8 @@
     output:
         persons:
             parent:
-                dtc__is_eligible: false   
+                dtc__is_eligible: false
+                dtc_apply__is_eligible: true   
 
 -   name: "Person has document and has oas"
     period: 2020-08
@@ -90,9 +93,11 @@
             has_no_document_has_oas:
                 dtc__has_documented_disability: false
                 oas__is_eligible: true
+                dtc__has_disability: true
     output:
         dtc__is_eligible: false   
         dtc__is_eligible_for_dtc_and_oas: false
+        dtc_apply__is_eligible: true
 
 -   name: "Person has document and has no oas"
     period: 2020-08
@@ -114,9 +119,11 @@
             has_no_document_has_no_oas:
                 dtc__has_documented_disability: false
                 oas__is_eligible: false
+                dtc_apply__is_eligible: true
     output:
         dtc__is_eligible: false   
         dtc__is_eligible_for_dtc_and_oas: false
+        dtc_apply__is_eligible: true 
 
 -   name: "Person has document and oas, but benefits ends"
     period: 2020-10
@@ -146,4 +153,5 @@
     output:
         persons:
             parent:
-                dtc__is_eligible: false   
+                dtc__is_eligible: false
+ 
