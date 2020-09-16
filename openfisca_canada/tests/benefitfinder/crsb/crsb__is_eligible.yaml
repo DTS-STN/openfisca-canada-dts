@@ -1,0 +1,27 @@
+- name: "crsb is eligible"
+  period: "2020-10"
+  absolute_error_margin: 0
+  input: 
+    persons:
+      "claimant is eligible for crsb":
+        income_status_reason__is_quarantined: true
+      "claimant is not eligible for crsb":
+        income_status_reason__is_quarantined: false
+  output:
+    crsb__is_eligible:
+      - true
+      - false
+
+- name: "crsb is eligible (before October 1, 2020)"
+  period: "2020-09"
+  absolute_error_margin: 0
+  input: 
+    persons:
+      "claimant is eligible for crsb":
+        income_status_reason__is_quarantined: true
+      "claimant is not eligible for crsb":
+        income_status_reason__is_quarantined: false
+  output:
+    crsb__is_eligible:
+      - false
+      - false
