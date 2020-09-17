@@ -44,7 +44,7 @@ class cerb__have_exhausted(Variable):
     definition_period = MONTH
     label = u"cerb exhausted"
 
-class cerb__almost_up(Variable):
+class cerb__payment_almost_up(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
