@@ -19,8 +19,46 @@ class cerb__is_eligible(Variable):
                 persons('cerb__is_eligible_lost_all_income_self_employed_closed_unpaid_leave_parental_leave_recent_ei_claim', period) +\
                 persons('cerb__is_eligible_lost_some_income_self_employed_1000_hours_or_less', period) +\
                 persons('cerb__is_eligible_gross_income_over_5k', period) +\
-                persons('cerb__is_eligible_lost_all_income_lost_job_and_no_income_quarantine', period)   
+                persons('cerb__is_eligible_lost_all_income_lost_job_and_no_income_quarantine', period)
 
+    def formula_2020_09(persons, period, parameters):
+        #if user select lost some income, skip the question if claimant is receiving cerb.
+        if ("income_status__has_lost_all_income" == true):
+            return persons('has_not_received_cerb', period) *\
+                    (persons('cerb__is_eligible_lost_all_income_lost_job_or_employer_closed', period) +\
+                    persons('cerb__is_eligible_lost_some_income_reduced_hours_1000_or_less', period) +\
+                    persons('cerb__is_eligible_lost_some_income_quarantine', period) +\
+                    persons('cerb__is_eligible_lost_all_income_self_employed_closed_unpaid_leave_parental_leave_recent_ei_claim', period) +\
+                    persons('cerb__is_eligible_lost_some_income_self_employed_1000_hours_or_less', period) +\
+                    persons('cerb__is_eligible_gross_income_over_5k', period) +\
+                    persons('cerb__is_eligible_lost_all_income_lost_job_and_no_income_quarantine', period))
+        else:
+            return persons('cerb__is_eligible_lost_all_income_lost_job_or_employer_closed', period) +\
+                    persons('cerb__is_eligible_lost_some_income_reduced_hours_1000_or_less', period) +\
+                    persons('cerb__is_eligible_lost_some_income_quarantine', period) +\
+                    persons('cerb__is_eligible_lost_all_income_self_employed_closed_unpaid_leave_parental_leave_recent_ei_claim', period) +\
+                    persons('cerb__is_eligible_lost_some_income_self_employed_1000_hours_or_less', period) +\
+                    persons('cerb__is_eligible_gross_income_over_5k', period) +\
+                    persons('cerb__is_eligible_lost_all_income_lost_job_and_no_income_quarantine', period)
+   
+class has_not_received_cerb(Variable):
+    value_type = bool
+    entity = Person
+    definition_period = MONTH
+    default_value = False
+    label = u"have claimant received cerb before?"
+
+class cerb__have_exhausted(Variable):
+    value_type = bool
+    entity = Person
+    definition_period = MONTH
+    label = u"cerb exhausted"
+
+class cerb__payment_almost_up(Variable):
+    value_type = bool
+    entity = Person
+    definition_period = MONTH
+    label = u"cerb almost up"
         
 class cerb__is_eligible_lost_all_income_lost_job_or_employer_closed(Variable):
     value_type = bool
