@@ -104,7 +104,7 @@
 #has lost some income Tests
 
 - name: "Lost Some Income - all false"
-  period: 2018-08
+  period: 2020-08
   absolute_error_margin: 0
   input:
     persons:
@@ -121,7 +121,7 @@
 
 
 - name: "Lost Some Income - is quarantined"
-  period: 2018-08
+  period: 2020-08
   absolute_error_margin: 0
   input:
     persons:
@@ -138,7 +138,7 @@
       - true
 
 - name: "Lost Some Income - has hours reduced or lost a job"
-  period: 2018-08
+  period: 2020-08
   absolute_error_margin: 0
   input:
     persons:
@@ -155,7 +155,7 @@
       - true
 
 - name: "Lost Some Income - is self employed some income"
-  period: 2018-08
+  period: 2020-08
   absolute_error_margin: 0
   input:
     persons:
@@ -172,7 +172,7 @@
       - true
 # Person has gross income of greater than 5K
 - name: "Person Gross income over 5k"
-  period: 2018-08
+  period: 2020-08
   absolute_error_margin: 0
   input:
     persons:
@@ -233,7 +233,7 @@
       - false
 
 - name: "Some Income tests (cerb expire)"
-  period: 2018-08
+  period: 2020-08
   absolute_error_margin: 0
   input:
     persons:
