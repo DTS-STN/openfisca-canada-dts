@@ -37,6 +37,18 @@ class has_not_received_cerb(Variable):
     definition_period = MONTH
     default_value = False
     label = u"have claimant received cerb before?"
+
+class cerb__have_exhausted(Variable):
+    value_type = bool
+    entity = Person
+    definition_period = MONTH
+    label = u"cerb exhausted"
+
+class cerb__almost_up(Variable):
+    value_type = bool
+    entity = Person
+    definition_period = MONTH
+    label = u"cerb almost up"
         
 class cerb__is_eligible_lost_all_income_lost_job_or_employer_closed(Variable):
     value_type = bool
