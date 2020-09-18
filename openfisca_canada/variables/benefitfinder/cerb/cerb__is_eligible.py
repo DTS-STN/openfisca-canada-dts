@@ -12,7 +12,7 @@ class cerb__is_eligible(Variable):
     reference = "tbd"
     end = "2020-09-26"
 
-    def formula(persons, period, parameters):
+    def formula_2020_03(persons, period, parameters):
         return persons('cerb__is_eligible_lost_all_income_lost_job_or_employer_closed', period) +\
                 persons('cerb__is_eligible_lost_some_income_reduced_hours_1000_or_less', period) +\
                 persons('cerb__is_eligible_lost_some_income_quarantine', period) +\
