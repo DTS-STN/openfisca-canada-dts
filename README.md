@@ -1,4 +1,4 @@
-# OpenFisca Canada 
+# OpenFisca Canada
 
 ## Writing the Legislation
 
