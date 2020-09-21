@@ -403,6 +403,21 @@
       - false  # person is being paid #
      # - true   #person provided no responses
 
+- name: "has received cerb"
+  period: 2020-9
+  absolute_error_margin: 0
+  input:
+    persons:
+      "is receiving cerb":
+        has_not_received_cerb: false
+        cerb__have_exhausted: false
+      "is not receiving cerb":
+        has_not_received_cerb: true
+        cerb__is_eligible_lost_all_income_lost_job_or_employer_closed: true
+  output:
+    cerb__is_eligible:
+      - true
+      - true
 
 
 
