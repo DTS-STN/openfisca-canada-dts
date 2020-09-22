@@ -419,6 +419,32 @@
       - true
       - true
 
+- name: "has received cerb (lost no income)"
+  period: 2020-9
+  absolute_error_margin: 0
+  input:
+    persons:
+      "is receiving cerb":
+        income_status__has_lost_no_income: true
+        has_not_received_cerb: false
+        cerb__have_exhausted: false
+  output:
+    cerb__is_eligible:
+      - false
+
+- name: "has received cerb (lost no income)"
+  period: 2020-9
+  absolute_error_margin: 0
+  input:
+    persons:
+      "is receiving cerb":
+        income_status__has_lost_no_income: false
+        has_not_received_cerb: false
+        cerb__have_exhausted: false
+  output:
+    cerb__is_eligible:
+      - true
+
 
 
 
