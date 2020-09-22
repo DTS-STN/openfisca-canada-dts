@@ -22,9 +22,9 @@ class cerb__is_eligible(Variable):
                 persons('cerb__is_eligible_lost_all_income_lost_job_and_no_income_quarantine', period)
 
     def formula_2020_09(persons, period, parameters):
-        return (persons('has_not_received_cerb', period) == False) *\
-                (persons('cerb__have_exhausted', period) == False) +\
-                ((persons('has_not_received_cerb', period) == True) *\
+        return not_(persons('has_not_received_cerb', period)) *\
+                not_(persons('cerb__have_exhausted', period)) +\
+                (persons('has_not_received_cerb', period) *\
                 persons('cerb__is_eligible_lost_all_income_lost_job_or_employer_closed', period) +\
                 persons('cerb__is_eligible_lost_some_income_reduced_hours_1000_or_less', period) +\
                 persons('cerb__is_eligible_lost_some_income_quarantine', period) +\
