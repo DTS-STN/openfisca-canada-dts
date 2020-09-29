@@ -24,7 +24,6 @@ class income_status(Variable):
     definition_period = MONTH
     label = "the input variable that to be compared with the enum value"
 
-
 class cerb_is_eligible(Variable):
     value_type = Enum
     possible_values = BooleanEnum
@@ -34,20 +33,11 @@ class cerb_is_eligible(Variable):
     label = "testing enum scenerio"
 
     def formula(persons, period, parameters):
-        income_status = persons('income_status', period)
-        lost_all_income = (income_status == IncomeStatus.ALL_INCOME)
-        lost_some_income = (income_status == IncomeStatus.SOME_INCOME)
-        lost_no_income = (income_status == IncomeStatus.UNCHANGED_INCOME)
-        unknown = (income_status == IncomeStatus.UNKNOWN)
-
-        return (lost_all_income + lost_some_income + lost_no_income + unknown)
-
-        '''if ((lost_all_income + lost_some_income).any()):
-            return BooleanEnum.TRUE
-        elif (lost_no_income):
-            return BooleanEnum.FALSE
-        else:
-            return BooleanEnum.UNKNOWN'''
-
-
-
+        is_eligible = (persons("income_status", period) == IncomeStatus.ALL_INCOME) +\
+            (persons("income_status", period) == IncomeStatus.SOME_INCOME)
+        is_not_eligible = persons("income_status", period) == IncomeStatus.UNCHANGED_INCOME
+        is_unknown_eligible = persons("income_status", period) == IncomeStatus.UNKNOWN
+        return select(
+            [is_eligible, is_not_eligible, is_unknown_eligible],
+            [BooleanEnum.TRUE, BooleanEnum.FALSE, BooleanEnum.UNKNOWN], default=BooleanEnum.UNKNOWN
+        )
