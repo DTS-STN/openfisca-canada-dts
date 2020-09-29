@@ -1,0 +1,19 @@
+- name: "income status with enum implementation"
+  period: 2020-09
+  absolute_error_margin: 0
+  input:
+    persons:
+      "lost all income":
+        income_status: "ALL_INCOME"
+      "lost some income":
+        income_status: "SOME_INCOME"
+      "unchanged income":
+        income_status: "UNCHANGED_INCOME"
+      "unknown":
+        income_status: "UNKNOWN"
+  output:
+    cerb_is_eligible: 
+      - "TRUE"
+      - "TRUE"
+      - "FALSE"
+      - "UNKNOWN"
