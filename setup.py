@@ -16,7 +16,7 @@ setup(
     url='https://github.com/ServiceInnovationLab/openfisca-canada',
     include_package_data=True,  # Will read MANIFEST.in
     install_requires=[
-        'OpenFisca-Core >=30.0.0,<31.0',
+        'OpenFisca-Core == 34.7.5',
         ],
     extras_require={
         'test': [
