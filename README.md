@@ -37,3 +37,6 @@ We are recommending you use docker:
 - To write new legislation, read [the wiki](https://github.com/ServiceInnovationLab/openfisca-canada/wiki) along with the OpenFisca [Coding the legislation](https://openfisca.org/doc/coding-the-legislation/index.html) section.
 - To contribute to the code, read our [contribution doc](https://github.com/ServiceInnovationLab/openfisca-canada/blob/master/CONTRIBUTING.md).
 
+## Coding guidelines wiki page
+
+https://github.com/DTS-STN/openfisca-canada-dts/wiki/Coding-guidelines
