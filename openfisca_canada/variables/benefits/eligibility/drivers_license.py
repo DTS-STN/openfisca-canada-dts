@@ -17,4 +17,4 @@ class drivers_license__is_eligible(Variable):
         persons_16_and_older = (persons("is_16_and_older", period))
         persons_residence = persons("province_of_residence", period)
         ontario_residence = (persons_residence == CanadianProvinceOrTerritory.ONTARIO)
-        return persons_16_and_older == ontario_residence
+        return (persons_16_and_older == ontario_residence) * persons("is_canadian", period)
