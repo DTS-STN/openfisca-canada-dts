@@ -4,8 +4,8 @@ from openfisca_canada.enums.province import *
 
 class province_of_residence(Variable):
     value_type = Enum
-    possible_values = Province
-    default_value = Province.UNKNOWN
+    possible_values = CanadianProvinceOrTerritory
+    default_value = CanadianProvinceOrTerritory.UNKNOWN
     entity = Person
     definition_period = DAY
     label = u"Person's province of residence"
