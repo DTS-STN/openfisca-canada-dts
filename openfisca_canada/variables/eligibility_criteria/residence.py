@@ -20,9 +20,6 @@ class is_resident_of_ontario(Variable):
     
     def formula(persons, period, parameters):
         person_province = persons("province_of_residence", period)
-        print("province = ")
-        print(person_province)
-        print(CanadianProvinceOrTerritory["ONTARIO"])
         return ( person_province == CanadianProvinceOrTerritory.ONTARIO)
 
 class is_canadian_resident(Variable):
