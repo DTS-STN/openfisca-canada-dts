@@ -1,0 +1,17 @@
+---   
+     #is ontario resident
+    - name: "Ontario resident"
+      period: 2020-09
+      absolute_error_margin: 0
+      input:
+        province_of_residence: ontario
+      output:
+        is_resident_of_ontario: true
+        # is not resident of Ontario
+    - name: "is not a resident of Ontario"
+      period: 2020-09
+      absolute_error_margin: 0
+      input:
+        province_of_residence: quebec
+      output:
+        is_resident_of_ontario: false

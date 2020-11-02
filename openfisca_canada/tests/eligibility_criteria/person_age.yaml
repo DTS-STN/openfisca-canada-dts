@@ -1,0 +1,25 @@
+---   
+     #person under 16 years
+    - name: "Age under 16 years old"
+      period: 2020-09
+      absolute_error_margin: 0
+      input:
+        age: 15
+      output:
+        is_16_or_older: false
+      #Person is 16 years old
+    - name: "age is 16 years old"
+      period: 2020-09
+      absolute_error_margin: 0
+      input:
+        age: 16
+      output:
+        is_16_or_older: true
+      #Person is over 16 years old  
+    - name: "age is over 16 years old"
+      period: 2020-10
+      absolute_error_margin: 0
+      input:
+        age: 35
+      output:
+        is_16_or_older: true
