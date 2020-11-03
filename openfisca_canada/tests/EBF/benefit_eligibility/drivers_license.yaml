@@ -4,7 +4,7 @@
       period: 2020-09
       absolute_error_margin: 0
       input:
-        age: 16
+        date_of_birth: 1976-12-23
         is_canadian_resident: true
         has_completed_driver_training: true
         has_parental_consent: true

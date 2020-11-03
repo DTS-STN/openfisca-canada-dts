@@ -2,8 +2,7 @@
 from openfisca_core.model_api import *
 # Import the entities specifically defined for this tax and benefit system
 from openfisca_canada.entities import Person
-
-import datetime
+from datetime import *
 
 class is_16_or_older(Variable):
     value_type = bool
@@ -21,13 +20,16 @@ class age(Variable):
     entity = Person
     definition_period = MONTH
     label = u"Person's date of birth"
-
-
+    def formula(persons, period, parametes):
+        today = date.today()
+        birthdate = persons("date_of_birth", period)[0].astype(datetime)
+        print(birthdate)
+        return today.year - birthdate.year - ((today.month, today.day) < (birthdate.month, birthdate.day))
 
 class date_of_birth(Variable):
     value_type = date
     entity = Person
-    definition_period = MONTH
+    definition_period = ETERNITY
     label = u"Person's date of birth"
 
   
