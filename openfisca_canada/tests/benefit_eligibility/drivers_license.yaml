@@ -1,0 +1,95 @@
+---   
+     #person is eligible for drivers license
+    - name: "is eligible for drivers license"
+      period: 2020-09
+      absolute_error_margin: 0
+      input:
+        age: 16
+        is_canadian_resident: true
+        has_completed_driver_training: true
+        has_parental_consent: true
+        is_expiring_2021: true
+        province_of_residence: "NOVA_SCOTIA"
+      output:
+        drivers_license__is_eligible: true
+        is_16_or_older: true
+    - name: "is not eligible for drivers license"
+      period: 2020-09
+      absolute_error_margin: 0
+      input:
+        age: 15
+        is_canadian_resident: true
+        has_completed_driver_training: true
+        has_parental_consent: true
+        is_expiring_2021: true
+        province_of_residence: "NOVA_SCOTIA"
+      output:
+        drivers_license__is_eligible: false
+        is_16_or_older: false
+    - name: "is not eligible for drivers license - not canadian"
+      period: 2020-09
+      absolute_error_margin: 0
+      input:
+        age: 16
+        is_canadian_resident: false
+        has_completed_driver_training: true
+        has_parental_consent: true
+        is_expiring_2021: true
+        province_of_residence: "NOVA_SCOTIA"
+      output:
+        drivers_license__is_eligible: false
+        is_16_or_older: true
+    #person is not eligible for drivers license - no drivers course
+    - name: "is not eligible for drivers license - no drivers course"
+      period: 2020-09
+      absolute_error_margin: 0
+      input:
+        age: 16
+        is_canadian_resident: true
+        has_completed_driver_training: false
+        has_parental_consent: true
+        is_expiring_2021: true
+        province_of_residence: "NOVA_SCOTIA"
+      output:
+        drivers_license__is_eligible: false
+        is_16_or_older: true
+    - name: "is not eligible for drivers license - no parental consent"
+      period: 2020-09
+      absolute_error_margin: 0
+      input:
+        age: 16
+        is_canadian_resident: true
+        has_completed_driver_training: true
+        has_parental_consent: false
+        is_expiring_2021: true
+        province_of_residence: "NOVA_SCOTIA"
+      output:
+        drivers_license__is_eligible: false
+        is_16_or_older: true
+    - name: "is not eligible for drivers license - unknown province"
+      period: 2020-09
+      absolute_error_margin: 0
+      input:
+        age: 16
+        is_canadian_resident: true
+        has_completed_driver_training: true
+        has_parental_consent: true
+        is_expiring_2021: true
+        province_of_residence: "UNKNOWN"
+      output:
+        drivers_license__is_eligible: false
+        is_16_or_older: true
+    - name: "is not eligible for drivers license - no expiring rule"
+      period: 2020-09
+      absolute_error_margin: 0
+      input:
+        age: 16
+        is_canadian_resident: true
+        has_completed_driver_training: true
+        has_parental_consent: true
+        is_expiring_2021: false
+        province_of_residence: "NOVA_SCOTIA"
+      output:
+        drivers_license__is_eligible: false
+        is_16_or_older: true        
+        
