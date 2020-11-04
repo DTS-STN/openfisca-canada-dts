@@ -27,4 +27,19 @@ class is_canadian_resident(Variable):
     default_value = False
     entity = Person
     definition_period = DAY
-    label = u"is person canadian"
+    label = u"is person canadian resident"
+
+class is_canadian_citizen(Variable):
+    value_type = bool
+    default_value = False
+    entity = Person
+    definition_period = DAY
+    label = u"is person canadian citizen"
+
+class has_permanent_address(Variable): 
+    value_type = bool
+    default_value = False 
+    entity = Person 
+    label = u"does this person have a permanent address" 
+    definition_period = DAY 
+    reference = u"TODO"         

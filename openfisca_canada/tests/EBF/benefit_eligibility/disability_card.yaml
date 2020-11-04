@@ -1,0 +1,39 @@
+---    
+    - name: "person is eligible for a disability card" 
+      period: 2018-08-01
+      absolute_error_margin: 0 
+      input: 
+        medical_insurance_card__is_eligible: true 
+        has_medical_certificate: true 
+      output: 
+        disability_card__is_eligible: true  
+ 
+
+    - name: "person is not eligible for a disability card" 
+      period: 2018-08-01
+      absolute_error_margin: 0 
+      input: 
+        medical_insurance_card__is_eligible: true 
+        has_medical_certificate: false 
+      output: 
+        disability_card__is_eligible: false 
+ 
+
+    - name: "person is not eligible for a disability card" 
+      period: 2018-08-01
+      absolute_error_margin: 0 
+      input: 
+        medical_insurance_card__is_eligible: false 
+        has_medical_certificate: false 
+      output: 
+        disability_card__is_eligible: false 
+ 
+
+    - name: "person is not eligible for a disability card" 
+      period: 2018-08-01
+      absolute_error_margin: 0 
+      input: 
+        medical_insurance_card__is_eligible: false 
+        has_medical_certificate: true 
+      output: 
+        disability_card__is_eligible: false 
