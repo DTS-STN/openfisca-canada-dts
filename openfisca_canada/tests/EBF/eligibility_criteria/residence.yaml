@@ -1,7 +1,7 @@
 ---   
      #is ontario resident
     - name: "Ontario resident"
-      period: 2020-09
+      period: 2020-09-23
       absolute_error_margin: 0
       input:
         province_of_residence: ONTARIO
@@ -9,83 +9,83 @@
         is_resident_of_ontario: true
         # is not resident of Ontario
     - name: "is  resident of QUEBEC"
-      period: 2020-09
+      period: 2020-09-23
       absolute_error_margin: 0
       input:
         province_of_residence: QUEBEC
       output:
         is_resident_of_ontario: false
     - name: "is resident of NOVA SCOTIA"
-      period: 2020-09
+      period: 2020-09-23
       input:
         province_of_residence: "NOVA_SCOTIA"
       output:
         is_resident_of_ontario: false
     - name: "is resident of NEW BRUNSWICK"
-      period: 2020-09
+      period: 2020-09-30
       absolute_error_margin: 0
       input:
         province_of_residence: "NEW_BRUNSWICK"
       output:
         is_resident_of_ontario: false
     - name: "is esident of Ontario"
-      period: 2020-09
+      period: 2020-09-23
       absolute_error_margin: 0
       input:
         province_of_residence: MANITOBA
       output:
         is_resident_of_ontario: false
     - name: "is resident of BRITISH COLUMBIA"
-      period: 2020-09
+      period: 2020-09-23
       absolute_error_margin: 0
       input:
         province_of_residence: "BRITISH_COLUMBIA"
       output:
         is_resident_of_ontario: false
     - name: "is resident of PRINCE EDWARD ISLAND"
-      period: 2020-09
+      period: 2020-09-24
       absolute_error_margin: 0
       input:
         province_of_residence: "PRINCE_EDWARD_ISLAND"
       output:
         is_resident_of_ontario: false    
     - name: "is resident of SASKATCHEWAN"
-      period: 2020-09
+      period: 2020-09-25
       absolute_error_margin: 0
       input:
         province_of_residence: SASKATCHEWAN
       output:
         is_resident_of_ontario: false    
     - name: "is resident of NEWFOUNDLAND AND LABRADOR"
-      period: 2020-09
+      period: 2020-09-26
       absolute_error_margin: 0
       input:
         province_of_residence: "NEWFOUNDLAND_AND_LABRADOR"
       output:
         is_resident_of_ontario: false
     - name: "is resident of NORTHWEST TERRITORIES"
-      period: 2020-09
+      period: 2020-09-12
       absolute_error_margin: 0
       input:
         province_of_residence: "NORTHWEST_TERRITORIES"
       output:
         is_resident_of_ontario: false
     - name: "is resident of YUKON"
-      period: 2020-09
+      period: 2020-09-27
       absolute_error_margin: 0
       input:
         province_of_residence: YUKON
       output:
         is_resident_of_ontario: false
     - name: "is resident of NUNAVUT"
-      period: 2020-09
+      period: 2020-09-28
       absolute_error_margin: 0
       input:
         province_of_residence: NUNAVUT
       output:
         is_resident_of_ontario: false
     - name: "is resident of UNKNOWN"
-      period: 2020-09
+      period: 2020-09-29
       absolute_error_margin: 0
       input:
         province_of_residence: UNKNOWN
