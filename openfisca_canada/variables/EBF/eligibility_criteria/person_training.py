@@ -7,5 +7,5 @@ class has_completed_driver_training(Variable):
     value_type = bool
     default_value = False
     entity = Person
-    definition_period = MONTH
+    definition_period = DAY
     label = u"Person has completed driving course"

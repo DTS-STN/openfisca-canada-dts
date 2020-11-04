@@ -7,5 +7,5 @@ class has_parental_consent(Variable):
     value_type = bool
     default_value = False
     entity = Person
-    definition_period = MONTH
+    definition_period = DAY
     label = u"Person has parental consent"

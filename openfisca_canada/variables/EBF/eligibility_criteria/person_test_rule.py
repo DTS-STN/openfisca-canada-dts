@@ -7,5 +7,5 @@ class is_expiring_2021(Variable):
     value_type = bool
     default_value = False
     entity = Person
-    definition_period = MONTH
+    definition_period = DAY
     label = u"Person has parental consent"

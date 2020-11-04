@@ -8,14 +8,14 @@ class province_of_residence(Variable):
     possible_values = CanadianProvinceOrTerritory
     default_value = CanadianProvinceOrTerritory.UNKNOWN
     entity = Person
-    definition_period = MONTH
+    definition_period = DAY
     label = u"Person's province of residence"
 
 class is_resident_of_ontario(Variable):
     value_type = bool
     default_value = False
     entity = Person
-    definition_period = MONTH
+    definition_period = DAY
     label = u"Person is a resident of Ontario"
     
     def formula(persons, period, parameters):
@@ -26,5 +26,5 @@ class is_canadian_resident(Variable):
     value_type = bool
     default_value = False
     entity = Person
-    definition_period = MONTH
+    definition_period = DAY
     label = u"is person canadian"
