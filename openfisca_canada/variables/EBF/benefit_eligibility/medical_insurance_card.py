@@ -9,6 +9,8 @@ class medical_insurance_card__is_eligible(Variable):
     label = u"Is this person eligible for a medical insurance card?"
     definition_period = DAY
     reference = u"TODO"
+    end = "2021-01-01"
+    
     def formula(persons, period, parameters):
         return persons("is_canadian_citizen",period) * \
         persons("has_permanent_address",period) * \

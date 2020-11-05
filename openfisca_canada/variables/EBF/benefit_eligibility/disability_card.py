@@ -16,11 +16,4 @@ class disability_card__is_eligible(Variable):
         return persons("medical_insurance_card__is_eligible", period) *\
         persons("has_medical_certificate", period)
 
- 
-
-class has_medical_certificate(Variable): 
-    value_type = bool 
-    entity = Person 
-    label = u"does this person have a medical certificate?" 
-    definition_period = DAY 
-    reference = u"TODO"          
+     
