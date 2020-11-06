@@ -1,0 +1,65 @@
+---    
+    - name: "person is eligible for medical insurance card" 
+      period: 2018-08-01
+      absolute_error_margin: 0 
+      input: 
+        is_canadian_citizen: true 
+        has_permanent_address: true 
+        is_canadian_resident: true 
+      output: 
+        medical_insurance_card__is_eligible: true  
+ 
+
+    - name: "person is not eligible for medical insurance card" 
+      period: 2018-08-01
+      absolute_error_margin: 0 
+      input: 
+        is_canadian_citizen: false 
+        has_permanent_address: false 
+        is_canadian_resident: false 
+      output: 
+        medical_insurance_card__is_eligible: false 
+ 
+ 
+    - name: "person is not eligible for medical insurance card" 
+      period: 2018-08-01
+      absolute_error_margin: 0 
+      input: 
+        is_canadian_citizen: true 
+        has_permanent_address: false 
+        is_canadian_resident: false 
+      output: 
+        medical_insurance_card__is_eligible: false 
+ 
+
+    - name: "person is not eligible for medical insurance card" 
+      period: 2018-08-01
+      absolute_error_margin: 0 
+      input: 
+        is_canadian_citizen: true 
+        has_permanent_address: true 
+        is_canadian_resident: false 
+      output: 
+        medical_insurance_card__is_eligible: false 
+ 
+
+    - name: "person is not eligible for medical insurance card" 
+      period: 2018-08-01
+      absolute_error_margin: 0 
+      input: 
+        is_canadian_citizen: true 
+        has_permanent_address: false 
+        is_canadian_resident: true 
+      output: 
+        medical_insurance_card__is_eligible: false 
+ 
+
+    - name: "person is not eligible for medical insurance card" 
+      period: 2018-08-01
+      absolute_error_margin: 0 
+      input: 
+        is_canadian_citizen: false 
+        has_permanent_address: true 
+        is_canadian_resident: true 
+      output: 
+        medical_insurance_card__is_eligible: false 

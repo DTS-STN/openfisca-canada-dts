@@ -1,0 +1,21 @@
+---   
+     #person under 16 years
+    - name: "Determine age from DOB - 43 years"
+      period: 2020-11-03
+      absolute_error_margin: 0
+      input:
+        date_of_birth: 1976-12-23
+      output:
+        age: 
+          "2020-11-23": 43
+          "2020-12-30": 44
+      #Person is 16 years old
+    - name: "Determine age from DOB - 43 years"
+      period: 2020-11-03
+      absolute_error_margin: 0
+      input:
+        date_of_birth: 2004-11-25
+      output:
+        age: 
+          "2020-11-23": 15
+          "2020-12-30": 16
