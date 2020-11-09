@@ -1,0 +1,52 @@
+---   
+     #person is eligible for drivers license
+    - name: "is eligible for seniors card"
+      period: 2020-11-01
+      absolute_error_margin: 0
+      input:
+        date_of_birth: "1960-12-23"
+        is_canadian_resident: true
+        province_of_residence: "ONTARIO"
+        is_retired: true
+      output:
+        seniors_card__is_eligible: true
+    - name: "is not eligible for seniors card -- not over 55 years"
+      period: 2020-11-01
+      absolute_error_margin: 0
+      input:
+        date_of_birth: "1990-12-23"
+        is_canadian_resident: true
+        province_of_residence: "ONTARIO"
+        is_retired: true
+      output:
+        seniors_card__is_eligible: false
+    - name: "is not eligible for seniors card - not canadian"
+      period: 2020-11-01
+      absolute_error_margin: 0
+      input:
+        date_of_birth: "1960-12-23"
+        is_canadian_resident: false
+        province_of_residence: "ONTARIO"
+        is_retired: true
+      output:
+        seniors_card__is_eligible: false
+    - name: "is not eligible for seniors card - not resident of Ontario"
+      period: 2020-11-01
+      absolute_error_margin: 0
+      input:
+        date_of_birth: "1960-12-23"
+        is_canadian_resident: true
+        province_of_residence: "QUEBEC"
+        is_retired: true
+      output:
+        seniors_card__is_eligible: false
+    - name: "is not eligible for seniors card - not retired"
+      period: 2020-11-01
+      absolute_error_margin: 0
+      input:
+        date_of_birth: "1960-12-23"
+        is_canadian_resident: true
+        province_of_residence: "ONTARIO"
+        is_retired: false
+      output:
+        seniors_card__is_eligible: false
