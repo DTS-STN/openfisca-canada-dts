@@ -35,4 +35,15 @@ class date_of_birth(Variable):
     definition_period = ETERNITY # This variable cannot change over time.
     label = u"Person's date of birth"
 
+
+class is_18_or_younger(Variable):
+    value_type = bool
+    default_value = False
+    entity = Person
+    definition_period = DAY
+    label = u"Person is 18 years of age or younger"
+
+    def formula(persons, period, parameters):
+        return (persons("age", period) <= 18)     
+
   
