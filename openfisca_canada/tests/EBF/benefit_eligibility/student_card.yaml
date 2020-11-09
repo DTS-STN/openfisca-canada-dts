@@ -1,0 +1,91 @@
+---    
+    - name: "is eligible for student card - younger than 18" 
+      period: 2020-10-01
+      absolute_error_margin: 0 
+      input: 
+        is_canadian_resident: true
+        has_parental_consent: true
+        is_expiring_2021: true
+        province_of_residence: "NOVA_SCOTIA"
+        date_of_birth: "2003-12-23"
+      output: 
+        student_card__is_eligible: true
+        age: 16
+
+    - name: "is eligible for student card = 18" 
+      period: 2020-10-01
+      absolute_error_margin: 0 
+      input: 
+        is_canadian_resident: true
+        has_parental_consent: true
+        is_expiring_2021: true
+        province_of_residence: "NOVA_SCOTIA"
+        date_of_birth: "2001-12-23"
+      output: 
+        student_card__is_eligible: true
+        age: 18   
+
+    - name: "is not eligible for student card - older than 18" 
+      period: 2020-10-01
+      absolute_error_margin: 0 
+      input: 
+        is_canadian_resident: true
+        has_parental_consent: true
+        is_expiring_2021: true
+        province_of_residence: "NOVA_SCOTIA"
+        date_of_birth: "1999-12-23"
+      output: 
+        student_card__is_eligible: false
+        age: 20  
+        
+    - name: "is not eligible for student card - not canadian resident" 
+      period: 2020-10-01
+      absolute_error_margin: 0 
+      input: 
+        is_canadian_resident: false
+        has_parental_consent: true
+        is_expiring_2021: true
+        province_of_residence: "NOVA_SCOTIA"
+        date_of_birth: "2001-12-23"
+      output: 
+        student_card__is_eligible: false
+        age: 18 
+
+    - name: "is not eligible for student card - no parental consent" 
+      period: 2020-10-01
+      absolute_error_margin: 0 
+      input: 
+        is_canadian_resident: true
+        has_parental_consent: false
+        is_expiring_2021: true
+        province_of_residence: "NOVA_SCOTIA"
+        date_of_birth: "2001-12-23"
+      output: 
+        student_card__is_eligible: false
+        age: 18 
+        
+    - name: "is not eligible for student card - no province" 
+      period: 2020-10-01
+      absolute_error_margin: 0 
+      input: 
+        is_canadian_resident: true
+        has_parental_consent: true
+        is_expiring_2021: true
+        province_of_residence: "UNKNOWN"
+        date_of_birth: "2001-12-23"
+      output: 
+        student_card__is_eligible: false
+        age: 18 
+        
+    - name: "is not eligible for student card - is expired" 
+      period: 2020-10-01
+      absolute_error_margin: 0 
+      input: 
+        is_canadian_resident: true
+        has_parental_consent: true
+        is_expiring_2021: false
+        province_of_residence: "ONTARIO"
+        date_of_birth: "2001-12-23"
+      output: 
+        student_card__is_eligible: false
+        age: 18
