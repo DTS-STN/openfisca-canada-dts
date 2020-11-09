@@ -22,29 +22,3 @@
         age: 35
       output:
         is_16_or_older: true
-
-
-     #person under 18 years
-    - name: "Age under 18 years old"
-      period: 2020-09-25
-      absolute_error_margin: 0
-      input:
-        age: 15
-      output:
-        is_18_or_younger: true
-     #Person is 18 years old
-    - name: "age is 18 years old"
-      period: 2020-09-25
-      absolute_error_margin: 0
-      input:
-        age: 18
-      output:
-       is_18_or_younger: true
-     #Person is over 18 years old  
-    - name: "age is over 18 years old"
-      period: 2020-10-13
-      absolute_error_margin: 0
-      input:
-        age: 25
-      output:
-        is_18_or_younger: false       
