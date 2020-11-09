@@ -1,5 +1,4 @@
 ---   
-     #person under 16 years
     - name: "Age under 16 years old"
       period: 2020-09-25
       absolute_error_margin: 0
