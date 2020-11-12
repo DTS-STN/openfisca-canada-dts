@@ -12,7 +12,6 @@
         province_of_residence: "NOVA_SCOTIA"
       output:
         drivers_license__is_eligible: true
-        is_16_or_older: true
         age: 43
     - name: "is not eligible for drivers license"
       period: 2020-09-23
@@ -26,7 +25,6 @@
         province_of_residence: "NOVA_SCOTIA"
       output:
         drivers_license__is_eligible: false
-        is_16_or_older: false
         age: 15
     - name: "is not eligible for drivers license - not canadian"
       period: 2020-09-23
@@ -40,7 +38,6 @@
         province_of_residence: "NOVA_SCOTIA"
       output:
         drivers_license__is_eligible: false
-        is_16_or_older: true
         age: 16
     #person is not eligible for drivers license - no drivers course
     - name: "is not eligible for drivers license - no drivers course"
@@ -55,7 +52,6 @@
         province_of_residence: "NOVA_SCOTIA"
       output:
         drivers_license__is_eligible: false
-        is_16_or_older: true
         age: 16
     - name: "is not eligible for drivers license - no parental consent"
       period: 2020-09-23
@@ -69,7 +65,6 @@
         province_of_residence: "NOVA_SCOTIA"
       output:
         drivers_license__is_eligible: false
-        is_16_or_older: true
         age: 16
     - name: "is not eligible for drivers license - unknown province"
       period: 2020-09-23
@@ -83,7 +78,6 @@
         province_of_residence: "UNKNOWN"
       output:
         drivers_license__is_eligible: false
-        is_16_or_older: true
         age: 16
     - name: "is not eligible for drivers license - no expiring rule"
       period: 2020-09-23
@@ -97,5 +91,4 @@
         province_of_residence: "NOVA_SCOTIA"
       output:
         drivers_license__is_eligible: false
-        is_16_or_older: true
         age: 16
