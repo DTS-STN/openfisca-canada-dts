@@ -1,18 +1,6 @@
 
 # Core's dependencies
 OpenFisca-Core[web-api] == 34.8.0
-Biryani[datetimeconv] >= 0.10.8
-dpath == 1.5.0
-enum34 >= 1.1.6
-future < 1.0.0
-numpy < 1.18, >= 1.11
-psutil==5.4.7
-PyYAML >= 3.10
-sortedcontainers==2.2.2
-flask == 1.0.2
-flask-cors ==3.0.7
-gunicorn <= 19.9.0
-werkzeug < 1.0.0
 
 
 # Old requirements, to install stable core instead of git
