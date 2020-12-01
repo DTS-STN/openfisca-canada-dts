@@ -12,8 +12,9 @@ ingress:
       hosts:
       {{ if or (eq .Environment.Name "prod-blue") (eq .Environment.Name "prod-green") }}
         - openfiscacanada.{{ requiredEnv "BASE_DOMAIN" }}
+        - openfiscacanada{{ .Environment.Name }}.{{ requiredEnv "BASE_DOMAIN" }}
       {{ end }}      
-        - openfiscacanada-{{ .Environment.Name }}.{{ requiredEnv "BASE_DOMAIN" }}
+        - openfiscacanada-{{ .Environment.Name }}.{{ requiredEnv "BASE_DOMAIN_DEV" }}
       annotations: {}
       # kubernetes.io/ingress.class: traefik
 
